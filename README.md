@@ -1,6 +1,7 @@
-# Microbiome Summer School 2017 - Introduction to machine learning
+# Microbiome Summer School 2017
+## Introduction to machine learning
 
-## Table of contents
+### Table of contents
 1. [Introduction](#introduction)
     1. [Scikit-Learn](#scikit-learn)
     2. [Getting started](#getting-started)
