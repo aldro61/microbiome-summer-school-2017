@@ -54,6 +54,7 @@ Show various metrics to measure the accuracy of a model
 
 Compare various types of models. Use the figure where we see the decision boundary of many algorithms. Make them look at the coefficients of a linear model vs a simple decision tree model.
 
+![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
 
 ### Application: peptide protein binding affinity prediction
 
