@@ -1,1 +1,1 @@
-# microbiome-summer-school-2017
+# Microbiome Summer School 2017 - Introduction to machine learning
