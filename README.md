@@ -37,7 +37,7 @@ ___
 
 #### Type of learning problems
 
-In supervised machine learning, data sets are collections of learning examples of the form ![equation](https://latex.codecogs.com/gif.latex?%28%5Cmathbf%7Bx%7D%2Cy%29), where ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D) is a feature vector and ![equation](https://latex.codecogs.com/gif.latex?y) is its corresonding target value. The goal of a machine learning algorithm is to produce a model that accurately estimated $y$ given $x$, i.e., $f(x) \approx y$.
+In supervised machine learning, data sets are collections of learning examples of the form *(x, y)*, where *x* is a feature vector and *y* is its corresonding target value. The goal of a machine learning algorithm is to produce a model that accurately estimated *y* given *x*, i.e., *f(x) &asymp; y*.
 
 **Classification:** Each learning example belongs to a class and the goal of the model is to assign each example to its corresponding class. There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
 
