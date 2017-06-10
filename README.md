@@ -38,6 +38,8 @@ Explain which competences we expect the participants to have gained following th
 
 **Classification:** Each learning example belongs to a class and the goal of the model is to assign each example to its corresponding class. There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
 
+**Regression:**
+
 ![Alt text](figures/figure.classification.vs.regression.png)
 
 
