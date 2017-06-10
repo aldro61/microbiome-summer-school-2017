@@ -32,6 +32,7 @@ Explain where to find the code and the data. How the practical session will be o
 
 Explain which competences we expect the participants to have gained following this tutorial.
 
+___
 ### The basics
 
 #### Type of learning problems
@@ -63,6 +64,7 @@ Compare various types of models. Use the figure where we see the decision bounda
 
 ![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
 
+___
 ### Application: peptide protein binding affinity prediction
 
 Use a data set from the work of Giguère et al. to show them a sequence-based regression problem. Use various algorithms: decision tree regression, kernel SVM and nearest neighbour. Benchmark their prediction accuracy using figures and make them notice the key differences between the algorithms. Explain why some work better than the others.
