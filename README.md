@@ -36,7 +36,7 @@ Explain which competences we expect the participants to have gained following th
 
 #### Type of learning problems
 
-Introduce the various types of ML problems. Say that we will be interested in supervised classification and regression.
+**Classification:** Each learning example belongs to a class and the goal of the model is to assign each example to its corresponding class. There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
 
 ![Alt text](figures/figure.classification.vs.regression.png)
 
