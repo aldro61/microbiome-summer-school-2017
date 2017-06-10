@@ -37,11 +37,11 @@ ___
 
 #### Type of learning problems
 
-In supervised machine learning, data sets are collections of learning examples of the form *(x, y)*, where *x* is a feature vector and *y* is its corresonding target value. The goal of a machine learning algorithm is to produce a model that accurately estimated *y* given *x*, i.e., *f(x) &asymp; y*.
+In supervised machine learning, data sets are collections of learning examples of the form *(x, y)*, where *x* is a **feature vector** and *y* is its corresonding **target value**. Features are observed variables that describe each example. The goal of a machine learning algorithm is to produce a **model** that **accurately estimates** *y* given *x*, i.e., *f(x) &asymp; y*.
 
-**Classification:** Each learning example belongs to a class and the goal of the model is to assign each example to its corresponding class. There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
+**Classification:** Each learning example is associated with a **qualitative** *y* value, which assigns it to a class (e.g., cancer, healthy). There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
 
-**Regression:** Each learning example is associated with a real-valued target value. The goal of the model is to estimate the correct output, given a learning example.
+**Regression:** Each learning example is associated with a quantitative target value (e.g., survial time). The goal of the model is to estimate the correct output, given a learning example.
 
 ![Alt text](figures/figure.classification.vs.regression.png)
 
