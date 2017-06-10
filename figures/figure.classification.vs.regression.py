@@ -16,7 +16,7 @@ axis_label_size = 12
 
 params = {'legend.fontsize': 6,
           'figure.figsize': (7, 3),
-          'axes.labelsize': 6,
+          'axes.labelsize': 7,
           'axes.titlesize': 8,
           'xtick.labelsize': 10,
           'ytick.labelsize': 10}
