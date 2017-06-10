@@ -14,10 +14,10 @@ from sklearn.svm import LinearSVC, LinearSVR
 title_size = 14
 axis_label_size = 12
 
-params = {'legend.fontsize': 6,
+params = {'legend.fontsize': 7,
           'figure.figsize': (7, 3),
-          'axes.labelsize': 7,
-          'axes.titlesize': 8,
+          'axes.labelsize': 8,
+          'axes.titlesize': 10,
           'xtick.labelsize': 10,
           'ytick.labelsize': 10}
 plt.rcParams.update(params)
