@@ -26,7 +26,7 @@ def make_classification_example(axis):
     yy = a * xx - (clf.intercept_[0]) / w[1]
 
     # plot the line, the points, and the nearest vectors to the plane
-    axis.plot(xx, yy, 'k-', color="black")
+    axis.plot(xx, yy, 'k-', color="black", label="Model")
 
     ax1.tick_params(labelbottom='off', labelleft='off')
     ax1.set_xlabel("Gene 1")
@@ -40,7 +40,7 @@ def make_regression_example(axis):
     axis.scatter(X[:, 0], y, color="blue", s=10, label="Patients")
 
     clf = LinearSVR().fit(X, y)
-    axis.plot(X[:, 0], clf.predict(X), color="black")
+    axis.plot(X[:, 0], clf.predict(X), color="black", label="Model")
 
     ax2.tick_params(labelbottom='off', labelleft='off')
     ax2.set_xlabel("Gene 1")
