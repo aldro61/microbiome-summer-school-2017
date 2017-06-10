@@ -38,6 +38,9 @@ Explain which competences we expect the participants to have gained following th
 
 Introduce the various types of ML problems. Say that we will be interested in supervised classification and regression.
 
+![Alt text](figures/figure.classification.vs.regression.png)
+
+
 #### Typical experimental protocol
 
 Show the two standard experimental protocols: train/validation/test and train(with k-fold cv)/test
