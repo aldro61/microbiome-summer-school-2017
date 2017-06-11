@@ -1,4 +1,4 @@
-<a href="../../"><-- Back to table of contents</a>
+<a href="../../#table-of-contents"><-- Back to table of contents</a>
 
 # Introduction
 
