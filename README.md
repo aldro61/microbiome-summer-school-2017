@@ -8,7 +8,7 @@
     3. [Objectives](#objectives)
 2. [The basics](#the-basics)
     1. [Type of learning problems](#type-of-learning-problems)
-    2. [Typical experimental protocol](#typical-experimental-protocol)
+    2. [Typical experimental protocol](protocols.ipynb)
     3. [Cross-validation](#cross-validation)
     4. [Assessing the accuracy of a model](#assessing-the-accuracy-of-a-model)
     5. [Interpretable vs black-box models](#interpretable-vs-black-box-models)
