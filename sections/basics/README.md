@@ -10,12 +10,23 @@ In supervised machine learning, data sets are collections of learning examples o
 
 ![Alt text](../../figures/figure.classification.vs.regression.png)
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** The most general form of supervised machine learning problem is called [structured output prediction](https://en.wikipedia.org/wiki/Structured_prediction). This includes classification and regression, but also predicting complex structures, such as texts and images. However, this goes beyond the scope of this tutorial.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** There exists another type of supervised learning problem called [structured output prediction](https://en.wikipedia.org/wiki/Structured_prediction). This setting includes classification and regression, in addition to the prediction of complex structures, such as texts and images. However, this goes beyond the scope of this tutorial.
 
 
 ## Typical experimental protocol
 
 Show the two standard experimental protocols: train/validation/test and train(with k-fold cv)/test
+
+<center>
+	<img src="figures/train_test_split.png" style="height:1.75in">
+</center>
+
+With scikit-learn, this can be done using the following code.
+
+~~~python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+~~~
 
 ## Cross-validation
 
