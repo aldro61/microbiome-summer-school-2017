@@ -41,17 +41,20 @@ Usually, we try many values for each hyperparameter and select the values that l
 
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information about the testing set to the learning algorithm. We would have an over-optimistic evaluation of our model's accuracy.
 
-Instead, we use a method called k-fold cross-validation. That is, we score each combination of hyperparameter values using the following procedure (5-fold CV is illustrated):
+Instead, we use a method called k-fold cross-validation. That is, we partition the training set into *k* subsets of equal size, called folds. Then, we iteratively leave one fold out for testing and train on the *k-1* remaining folds. Each time, we estimate the accuracy of the obtained model on the left out fold. Finally, we select the hyperparameter values that lead to the greatest accuracy, averaged over the *k* folds. 
+
+The following figure illustrates a 5-fold cross-validation.
 <center>
 	<img src="figures/cross_validation.png" height="350">
 </center>
-Then, we use the hyperparameters leading to the greatest "CV score" to train the algorithm on the entire training set. This yields a model, which we can now evaluate on the testing set.
+This is done for every combination of hyperparameter values and the one that leads to the greatest "CV score" is selected. It is then used to retrain the algorithm on the entire training set. This yields a model, which we can now evaluate on the testing set.
 
 ~~~python
 from sklearn.model_selection import GridSearchCV
 from sklearn.tree import DecisionTreeClassifier
 param_grid = {'max_depth': [1, 5, 10, 50, 100]}
 cv = GridSearchCV(DecisionTreeClassifier(), param_grid)
+cv.fit(X_train, y_train)
 ~~~
 
 ### Assessing the accuracy of a model
