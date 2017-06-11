@@ -12,10 +12,10 @@
     3. [Cross-validation](sections/basics/README.md#cross-validation)
     4. [Assessing the accuracy of a model](sections/basics/README.md#assessing-the-accuracy-of-a-model)
     5. [Interpretable vs black-box models](sections/basics/README.md#interpretable-vs-black-box-models)
-3. [Application: peptide protein binding affinity prediction](#application-peptide-protein-binding-affinity-prediction)
-4. [Application: predicting antibiotic resistance](#application-predicting-antibiotic-resistance)
-5. [Bonus: machine learning competition](#bonus-machine-learning-competition)
-6. [Conclusion](#conclusion)
+3. [Application: peptide protein binding affinity prediction](sections/application_peptides/README.md)
+4. [Application: predicting antibiotic resistance](sections/application_antibiotics/README.md)
+5. [Bonus: machine learning competition](sections/competition/README.md)
+6. [Conclusion](sections/conclusion/README.md)
 
 ---
 
