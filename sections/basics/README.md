@@ -43,13 +43,13 @@ Usually, we try many values for each hyperparameter and select the values that l
 
 Instead, we use a method called **k-fold cross-validation**. That is, we partition the training set into *k* subsets of equal size, called folds. 
 <center>
-	<img src="figures/folds.png" height="150">
+	<img src="figures/folds.png" height="150" />
 </center>
 Then, we iteratively leave one fold out for testing and train on the *k-1* remaining folds. Each time, we estimate the accuracy of the obtained model on the left out fold. Finally, we select the hyperparameter values that lead to the greatest accuracy, averaged over the *k* folds. 
 
 The following figure illustrates a 5-fold cross-validation.
 <center>
-	<img src="figures/cross_validation.png" height="350">
+	<img src="figures/cross_validation.png" height="350" />
 </center>
 This is done for every combination of hyperparameter values and the one that leads to the greatest "CV score" is selected. It is then used to retrain the algorithm on the entire training set. This yields a model, which we can now evaluate on the testing set.
 
