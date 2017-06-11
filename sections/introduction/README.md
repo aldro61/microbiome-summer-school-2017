@@ -2,7 +2,9 @@
 
 ## Overview of our toolbox
 
-Present the tools that we will be using: Python, R, Sckit-Learn, Numpy
+Present the tools that we will be using: Python, Sckit-Learn, Numpy
+
+* ![Alt text](http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png) 
 
 ## Getting started
 

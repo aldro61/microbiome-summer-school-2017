@@ -15,8 +15,9 @@ In supervised machine learning, data sets are collections of learning examples o
 
 ## Typical experimental protocol
 
-Show the two standard experimental protocols: train/validation/test and train(with k-fold cv)/test
+### Training and testing sets
 
+When performing a machine learning analysis on a data set, it is important to keep some data aside to estimate the accuracy of our model.
 <center>
 	<img src="figures/train_test_split.png" height="175">
 </center>
