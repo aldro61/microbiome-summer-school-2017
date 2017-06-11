@@ -4,9 +4,9 @@
 
 In supervised machine learning, data sets are collections of learning examples of the form *(x, y)*, where *x* is a **feature vector** and *y* is its corresonding **target value**. Features are observed variables that describe each example. The goal of a machine learning algorithm is to produce a **model** (*h*) that **accurately estimates** *y* given *x*, i.e., *h(x) &asymp; y*.
 
-**Classification:** Each learning example is associated with a **qualitative** target value, which corresponds to a class (e.g., cancer, healthy). There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
+* **Classification:** Each learning example is associated with a **qualitative** target value, which corresponds to a class (e.g., cancer, healthy). There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
 
-**Regression:** Each learning example is associated with a **quantitative** target value (e.g., survial time). The goal of the model is to estimate the correct output, given a feature vector.
+* **Regression:** Each learning example is associated with a **quantitative** target value (e.g., survial time). The goal of the model is to estimate the correct output, given a feature vector.
 
 ![Alt text](../../figures/figure.classification.vs.regression.png)
 
@@ -17,16 +17,18 @@ In supervised machine learning, data sets are collections of learning examples o
 
 ### Training and testing sets
 
-When performing a machine learning analysis on a data set, it is important to keep some data aside to estimate the accuracy of our model.
+When performing a machine learning analysis on a data set, it is important to keep some data aside to estimate the accuracy the learned model.
+
+* **Training set:** set of learning examples used to train the algorithm
+* **Testing set:** set of learning examples used to estimate the accuracy of the model
+
 <center>
 	<img src="figures/train_test_split.png" height="175">
 </center>
 
-With scikit-learn, this can be done using the following code.
-
 ~~~python
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
 ~~~
 
 ## Cross-validation
