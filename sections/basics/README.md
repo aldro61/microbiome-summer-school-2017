@@ -41,7 +41,7 @@ Usually, we try many values for each hyperparameter and select the values that l
 
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information about the testing set to the learning algorithm. We would have an over-optimistic evaluation of our model's accuracy.
 
-Instead, we use a method called k-fold cross-validation. That is, we partition the training set into *k* subsets of equal size, called folds. 
+Instead, we use a method called **k-fold cross-validation**. That is, we partition the training set into *k* subsets of equal size, called folds. 
 <center>
 	<img src="figures/folds.png" height="150">
 </center>
