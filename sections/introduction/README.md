@@ -1,3 +1,5 @@
+<a href="../../"><-- Back to table of contents</a>
+
 # Introduction
 
 ## Overview of our toolbox
@@ -6,7 +8,7 @@ This tutorial is an introduction to machine learning in Python. We will rely hea
 
 <img src="https://www.python.org/static/img/python-logo@2x.png" height="50" />
 
-<img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" height="50" />
+<img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" height="50" /> 
 
 <img src="http://www.numpy.org/_static/numpy_logo.png" height="50" />
  

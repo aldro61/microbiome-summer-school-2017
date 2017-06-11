@@ -1,3 +1,5 @@
+<a href="../../"><-- Back to table of contents</a>
+
 # The basics
 
 ## Type of learning problems
