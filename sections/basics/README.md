@@ -22,7 +22,7 @@ When performing a machine learning analysis on a data set, it is important to ke
 * **Training set:** set of learning examples used to train the algorithm
 * **Testing set:** set of learning examples used to estimate the accuracy of the model
 
-<img src="figures/train_test_split.png" height="175" />
+<img src="figures/train_test_split.png" height="150" />
 
 ```python
 from sklearn.model_selection import train_test_split
