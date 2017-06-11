@@ -41,7 +41,11 @@ Usually, we try many values for each hyperparameter and select the values that l
 
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information about the testing set to the learning algorithm. We would have an over-optimistic evaluation of our model's accuracy.
 
-Instead, we use a method called k-fold cross-validation. That is, we partition the training set into *k* subsets of equal size, called folds. Then, we iteratively leave one fold out for testing and train on the *k-1* remaining folds. Each time, we estimate the accuracy of the obtained model on the left out fold. Finally, we select the hyperparameter values that lead to the greatest accuracy, averaged over the *k* folds. 
+Instead, we use a method called k-fold cross-validation. That is, we partition the training set into *k* subsets of equal size, called folds. 
+<center>
+	<img src="figures/folds.png" height="150">
+</center>
+Then, we iteratively leave one fold out for testing and train on the *k-1* remaining folds. Each time, we estimate the accuracy of the obtained model on the left out fold. Finally, we select the hyperparameter values that lead to the greatest accuracy, averaged over the *k* folds. 
 
 The following figure illustrates a 5-fold cross-validation.
 <center>
