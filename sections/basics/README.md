@@ -59,7 +59,16 @@ cv.fit(X_train, y_train)
 
 ### Assessing the accuracy of a model
 
-Show various metrics to measure the accuracy of a model
+Many metrics can be used to measure the correctness of a model's predictions. In this tutorial, we will use the following metrics:
+
+#### Classification
+
+**Accuracy:** the proportion of correct predictions in a set of examples (best: 1, worst: 0).
+
+#### Regression
+
+**Coefficient of determination:** the square of the correlation coefficient (best: 1, worst: 0).
+
 
 ## Interpretable vs black-box models
 
