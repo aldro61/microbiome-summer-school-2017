@@ -34,7 +34,7 @@ def make_classification_example(axis, random_state):
     # get the separating hyperplane
     w = clf.coef_[0]
     a = -w[0] / w[1]
-    xx = np.linspace(-5, 5)
+    xx = np.linspace(-5, 7)
     yy = a * xx - (clf.intercept_[0]) / w[1]
 
     # plot the line, the points, and the nearest vectors to the plane
