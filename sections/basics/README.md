@@ -39,7 +39,7 @@ Usually, we try many values for each hyperparameter and select the values that l
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Question:** Can we use the testing set to select the hyperparameter values that lead to the most accurate model?
 
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information from the testing set to the learning algorithm.
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information about the testing set to the learning algorithm. We would have an over-optimistic evaluation of our model's accuracy.
 
 Instead, we use a method called k-fold cross-validation:
 
