@@ -45,6 +45,8 @@ In supervised machine learning, data sets are collections of learning examples o
 
 ![Alt text](figures/figure.classification.vs.regression.png)
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** The most general form of supervised machine learning problem is called [structured output prediction](https://en.wikipedia.org/wiki/Structured_prediction). This includes classification and regression, but also predicting complex structures, such as graphs. However, this goes beyond the scope of this tutorial.
+
 
 #### Typical experimental protocol
 
