@@ -4,9 +4,9 @@
 
 This tutorial is an introduction to machine learning in Python. We will rely heavily on the scikit-learn and numpy packages. Scikit-learn will be used for implementing machine learning protocols and learning algorithms, whereas numpy will be used to manipulate matrices of data.
 
-<img src="https://www.python.org/static/img/python-logo@2x.png" height=50 />
-<img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" height=50 />
-<img src="http://www.numpy.org/_static/numpy_logo.png" height=50 />
+<img src="https://www.python.org/static/img/python-logo@2x.png" height="50" /> &nbsp;
+<img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" height="50" /> &nbsp;
+<img src="http://www.numpy.org/_static/numpy_logo.png" height="50" />
  
  
 ## Getting started
