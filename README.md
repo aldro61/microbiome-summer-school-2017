@@ -32,13 +32,16 @@ Explain where to find the code and the data. How the practical session will be o
 
 Explain which competences we expect the participants to have gained following this tutorial.
 
+___
 ### The basics
 
 #### Type of learning problems
 
-**Classification:** Each learning example belongs to a class and the goal of the model is to assign each example to its corresponding class. There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
+In supervised machine learning, data sets are collections of learning examples of the form *(x, y)*, where *x* is a **feature vector** and *y* is its corresonding **target value**. Features are observed variables that describe each example. The goal of a machine learning algorithm is to produce a **model** (*h*) that **accurately estimates** *y* given *x*, i.e., *h(x) &asymp; y*.
 
-**Regression:**
+**Classification:** Each learning example is associated with a **qualitative** target value, which corresponds to a class (e.g., cancer, healthy). There can be two classes ([binary classification](https://en.wikipedia.org/wiki/Binary_classification)) or more ([multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)).
+
+**Regression:** Each learning example is associated with a **quantitative** target value (e.g., survial time). The goal of the model is to estimate the correct output, given a feature vector.
 
 ![Alt text](figures/figure.classification.vs.regression.png)
 
@@ -61,6 +64,7 @@ Compare various types of models. Use the figure where we see the decision bounda
 
 ![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
 
+___
 ### Application: peptide protein binding affinity prediction
 
 Use a data set from the work of Giguère et al. to show them a sequence-based regression problem. Use various algorithms: decision tree regression, kernel SVM and nearest neighbour. Benchmark their prediction accuracy using figures and make them notice the key differences between the algorithms. Explain why some work better than the others.
@@ -79,3 +83,9 @@ Some participants will necessarily be faster than others. We could have a small 
 ### Conclusion
 
 Wrap up and summarize what we have learned.
+
+
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Exercise**
+- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Solution**
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note**
