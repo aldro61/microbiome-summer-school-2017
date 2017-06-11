@@ -22,9 +22,7 @@ When performing a machine learning analysis on a data set, it is important to ke
 * **Training set:** set of learning examples used to train the algorithm
 * **Testing set:** set of learning examples used to estimate the accuracy of the model
 
-<center>
-	<img src="figures/train_test_split.png" height="175">
-</center>
+<img src="figures/train_test_split.png" height="175" />
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -42,11 +40,15 @@ Usually, we try many values for each hyperparameter and select the values that l
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information about the testing set to the learning algorithm. We would have an over-optimistic evaluation of our model's accuracy.
 
 Instead, we use a method called **k-fold cross-validation**. That is, we partition the training set into *k* subsets of equal size, called folds. 
+
 <img src="figures/folds.png" height="150" />
+
 Then, we iteratively leave one fold out for testing and train on the *k-1* remaining folds. Each time, we estimate the accuracy of the obtained model on the left out fold. Finally, we select the hyperparameter values that lead to the greatest accuracy, averaged over the *k* folds. 
 
 The following figure illustrates a 5-fold cross-validation.
+
 <img src="figures/cross_validation.png" height="350" />
+
 This is done for every combination of hyperparameter values and the one that leads to the greatest "CV score" is selected. It is then used to retrain the algorithm on the entire training set. This yields a model, which we can now evaluate on the testing set.
 
 ```python
