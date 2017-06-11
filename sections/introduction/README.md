@@ -12,5 +12,8 @@ Explain where to find the code and the data. How the practical session will be o
 
 ## Objectives
 
-Explain which competences we expect the participants to have gained following this tutorial.
-
+After completing this tutorial, you should have acquired the following skills:
+* Using Python to apply machine learning algorithms to data sets.
+* Understanding the various types of problems (regression, classification)
+* Perform machine learning experiments using correct protocols.
+* Applying learning algorithms to biological data
