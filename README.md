@@ -17,9 +17,9 @@
 5. [Bonus: machine learning competition](#bonus-machine-learning-competition)
 6. [Conclusion](#conclusion)
 
+---
 
 ### Contact
-
 This tutorial was created for presentation at the 2017 Microbiome Summer School (Québec City, Canada).
 
 For any questions or comments, please contact [Alexandre Drouin](mailto:alexandre.drouin.8@ulaval.ca) or [François Laviolette](mailto:francois.laviolette@ift.ulaval.ca).
