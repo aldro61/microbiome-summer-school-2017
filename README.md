@@ -18,30 +18,8 @@
 6. [Conclusion](#conclusion)
 
 
+### Contact
 
+This tutorial was created for presentation at the 2017 Microbiome Summer School (Québec City, Canada).
 
-___
-### Application: peptide protein binding affinity prediction
-
-Use a data set from the work of Giguère et al. to show them a sequence-based regression problem. Use various algorithms: decision tree regression, kernel SVM and nearest neighbour. Benchmark their prediction accuracy using figures and make them notice the key differences between the algorithms. Explain why some work better than the others.
-
-
-### Application: predicting antibiotic resistance
-
-Use a data set from the PATRIC database to make them experiment with a really large scale classification problem. Make them train a few algorithms, including the SCM. Make them look at the SCM models and use BLAST to interprete the obtained model.
-
-
-### Bonus: machine learning competition
-
-Some participants will necessarily be faster than others. We could have a small machine learning competition with a leaderboard (use the one we use to train our rookies). 
-
-
-### Conclusion
-
-Wrap up and summarize what we have learned.
-
-
-
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Exercise**
-- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Solution**
-- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note**
+For any questions or comments, please contact [Alexandre Drouin](mailto:alexandre.drouin.8@ulaval.ca) or [François Laviolette](mailto:francois.laviolette@ift.ulaval.ca).
