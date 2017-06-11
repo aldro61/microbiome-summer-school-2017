@@ -41,7 +41,7 @@ Usually, we try many values for each hyperparameter and select the values that l
 
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information about the testing set to the learning algorithm. We would have an over-optimistic evaluation of our model's accuracy.
 
-Instead, we use a method called k-fold cross-validation. That is, we score each combination of hyperparameter values using the following procedure:
+Instead, we use a method called k-fold cross-validation. That is, we score each combination of hyperparameter values using the following procedure (5-fold CV is illustrated):
 <center>
 	<img src="figures/cross_validation.png" height="350">
 </center>
