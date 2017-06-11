@@ -18,7 +18,7 @@ In supervised machine learning, data sets are collections of learning examples o
 Show the two standard experimental protocols: train/validation/test and train(with k-fold cv)/test
 
 <center>
-	<img src="figures/train_test_split.png" style="height:1.75in">
+	<img src="figures/train_test_split.png" height="175">
 </center>
 
 With scikit-learn, this can be done using the following code.
