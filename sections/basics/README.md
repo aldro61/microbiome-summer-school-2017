@@ -31,11 +31,28 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
 ~~~
 
-## Cross-validation
+### Cross-validation
 
-Give a bit more details about cross-validation and make them experiment with it a little bit.
+Some learning algorithms have parameters that must be **set by the user**. Such parameters are called **hyperparameters**. For example, when learning decision trees, the maximum depth of the tree is a hyperparameter.
 
-## Assessing the accuracy of a model
+Usually, we try many values for each hyperparameter and select the values that lead to the most accurate model.
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Question:** Can we use the testing set to estimate the accuracy of the model obtained with specific hyperparameter values?
+
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information from the testing set to the learning algorithm.
+
+Instead, we use a method called k-fold cross-validation:
+
+Figure goes here.
+
+~~~python
+from sklearn.model_selection import GridSearchCV
+from sklearn.tree import DecisionTreeClassifier
+param_grid = {'max_depth': [1, 5, 10, 50, 100]}
+cv = GridSearchCV(DecisionTreeClassifier(), param_grid)
+~~~
+
+### Assessing the accuracy of a model
 
 Show various metrics to measure the accuracy of a model
 
