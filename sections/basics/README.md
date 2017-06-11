@@ -33,11 +33,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
 
 ### Cross-validation
 
-Some learning algorithms have parameters that must be **set by the user**. Such parameters are called **hyperparameters**. For example, when learning decision trees, the maximum depth of the tree is a hyperparameter.
+Some learning algorithms have **parameters** that must be **set by the user**. Such parameters are called **hyperparameters**. For example, when learning decision trees, the maximum depth of the tree is a hyperparameter.
 
 Usually, we try many values for each hyperparameter and select the values that lead to the most accurate model.
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Question:** Can we use the testing set to estimate the accuracy of the model obtained with specific hyperparameter values?
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Question:** Can we use the testing set to select the hyperparameter values that lead to the most accurate model?
 
 ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Answer:** No! Doing so would reveal information from the testing set to the learning algorithm.
 
