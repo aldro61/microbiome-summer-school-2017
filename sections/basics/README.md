@@ -26,6 +26,8 @@ When performing a machine learning analysis on a data set, it is important to ke
 
 <img src="figures/train_test_split.png" height="150" />
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** It is extremely important to split the data set **randomly**. You may not choose which examples go to the training and testing sets.
+
 ```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
