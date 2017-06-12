@@ -112,14 +112,21 @@ make basics.svm.regularization
 
 * Why are the training and cross-validation accuracies greater than the testing set accuracy?
 
-> **Solution:** [http://test.com](http://test.com)
+> **Solution:** [click me](http://test.com)
 
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Find which algo is overfitting/underfitting.
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** You run a panel of learning algorithms on your favorite binary classification data set and obtain the following accuracies.
 
-> **Solution:** [http://test.com](http://test.com)
+|              | Linear SVM | RBF SVM | 5-Nearest Neighbour |
+|--------------|------------|---------|---------------------|
+| Training Set | 60%        | 90%     | 88%                 |
+| Testing Set  | 60%        | 70%     | 85%                 |
+
+Which algorithms are overfitting or underfitting?
+
+> **Solution:** [click me](http://test.com)
 
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Give them a model that is overfitting because too complex and ask them to fix it.
 
-> **Solution:** [http://test.com](http://test.com)
+> **Solution:** [click me](http://test.com)
