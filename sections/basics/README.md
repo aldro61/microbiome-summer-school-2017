@@ -89,6 +89,7 @@ Source: [http://scikit-learn.org/stable/auto_examples/model_selection/plot_under
 | Training Set 	| Good        	| Poor         	|
 | Testing Set  	| Poor        	| Poor         	|
 
+
 Learning algorithms generally have **regularization** hyperparameters, which are used to limit overfitting. For example, the maximum depth of a decision tree.
 
 
