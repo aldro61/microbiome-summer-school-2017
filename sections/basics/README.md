@@ -79,6 +79,7 @@ Many metrics can be used to measure the correctness of a model's predictions. In
 
 * **Underfitting:** The model **performs poorly on the training set and on the testing set**. Results from using a model that is not complex enough to model that quantity of interest.
 
+This figure shows an example of underfitting (left) and overfitting (right):
 ![Alt text](./figures/over_under_fitting.png)
 Source: [http://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html](http://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html)
 
