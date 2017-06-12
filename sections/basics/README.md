@@ -112,6 +112,8 @@ make basics.svm.regularization
 
 * Why are the training and cross-validation accuracies greater than the testing set accuracy?
 
+* Take a look at [the code](http://todo.com) to see how it's done.
+
 > **Solution:** [click me](http://test.com)
 
 
