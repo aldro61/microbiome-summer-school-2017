@@ -57,23 +57,37 @@ from sklearn.tree import DecisionTreeClassifier
 param_grid = {'max_depth': [1, 5, 10, 50, 100]}
 cv = GridSearchCV(DecisionTreeClassifier(), param_grid)
 cv.fit(X_train, y_train)
+test_predictions = cv.predict(X_test)
 ```
 
 ### Assessing the accuracy of a model
 
+#### Metrics
+
 Many metrics can be used to measure the correctness of a model's predictions. In this tutorial, we will use the following metrics:
 
-#### Classification
+* **Classification:** we will use the **accuracy**, which is the proportion of correct predictions in a set of examples (best: 1, worst: 0).
 
-**Accuracy:** the proportion of correct predictions in a set of examples (best: 1, worst: 0).
-
-#### Regression
-
-**Coefficient of determination:** the square of the correlation coefficient (best: 1, worst: 0).
+* **Regression:** we will use the **mean squared error**, which is the average of the squared deviations, i.e. the difference between what is expected and what is predicted.
 
 
-## Interpretable vs black-box models
+#### Overfitting and Underfitting
+
+* **Overfitting:** The model is highly accurate on the training set, but performs poorly on the testing set. Results from using an overly complex model that fits the noise in the input data.
+
+* **Underfitting:** The model performs poorly on the training set and on the testing set. Results from using a model that is not complex enough to model that quantity of interest.
+
+
+
+
+
+### Interpretable vs black-box models
 
 Compare various types of models. Use the figure where we see the decision boundary of many algorithms. Make them look at the coefficients of a linear model vs a simple decision tree model.
 
-![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
+
+### Exercises
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** 
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** 
