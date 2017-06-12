@@ -82,7 +82,7 @@ Many metrics can be used to measure the correctness of a model's predictions. In
 ![Alt text](./figures/over_under_fitting.png)
 Source: [http://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html](http://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html)
 
-**Summary table:** Accuracy of the model in over-under fitting situations.
+**Summary table:** Accuracy of the model in over/under-fitting situations.
 
 |              	| Overfitting 	| Underfitting 	|
 |--------------	|-------------	|--------------	|
@@ -102,6 +102,24 @@ Compare various types of models. Use the figure where we see the decision bounda
 
 ### Exercises
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** 
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** Train a Support Vector Machine Classifier on the Iris data set using 5-fold cross-validation to choose the value of it's regularization hyperparameter. Use the following command:
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** 
+```bash
+make basics.svm.regularization
+```
+
+* Based on the plot, which value should we choose for the regularization hyperparameter?
+
+* Why are the training and cross-validation accuracies greater than the testing set accuracy?
+
+> **Solution:** [Link here](link here)
+
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Find which algo is overfitting/underfitting.
+
+> **Solution:** [Link here](link here)
+
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Give them a model that is overfitting because too complex and ask them to fix it.
+
+> **Solution:** [Link here](link here)
