@@ -75,9 +75,14 @@ Many metrics can be used to measure the correctness of a model's predictions. In
 
 #### Overfitting and Underfitting
 
-* **Overfitting:** The model is highly accurate on the training set, but performs poorly on the testing set. Results from using an overly complex model that fits the noise in the input data.
+|              	| Overfitting 	| Underfitting 	|
+|--------------	|-------------	|--------------	|
+| Training Set 	| Good        	| Poor         	|
+| Testing Set  	| Poor        	| Poor         	|
 
-* **Underfitting:** The model performs poorly on the training set and on the testing set. Results from using a model that is not complex enough to model that quantity of interest.
+* **Overfitting:** Results from using an overly complex model that fits the noise in the input data.
+
+* **Underfitting:** Results from using a model that is not complex enough to model that quantity of interest.
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** For more metrics, see [http://scikit-learn.org/stable/modules/model_evaluation.html](http://scikit-learn.org/stable/modules/model_evaluation.html).
