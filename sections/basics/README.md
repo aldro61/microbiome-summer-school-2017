@@ -91,9 +91,10 @@ Accuracy of the learned model:
 
 Compare various types of models. Use the figure where we see the decision boundary of many algorithms. Make them look at the coefficients of a linear model vs a simple decision tree model.
 
+![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
 
 ### Exercises
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** 
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** 
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** 
