@@ -112,14 +112,14 @@ make basics.svm.regularization
 
 * Why are the training and cross-validation accuracies greater than the testing set accuracy?
 
-> **Solution:** [Link here](link here)
+**Solution:** [Link here](link here)
 
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Find which algo is overfitting/underfitting.
 
-> **Solution:** [Link here](link here)
+**Solution:** [Link here](link here)
 
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Give them a model that is overfitting because too complex and ask them to fix it.
 
-> **Solution:** [Link here](link here)
+**Solution:** [Link here](link here)
