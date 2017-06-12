@@ -70,7 +70,7 @@ Many metrics can be used to measure the correctness of a model's predictions. In
 
 * **Regression:** we will use the [**mean squared error**](https://en.wikipedia.org/wiki/Mean_squared_error), which is the average of the squared deviations, i.e. the difference between what is expected and what is predicted.
 
-
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** For more metrics, see [http://scikit-learn.org/stable/modules/model_evaluation.html](http://scikit-learn.org/stable/modules/model_evaluation.html).
 
 
 #### Overfitting and Underfitting
@@ -85,8 +85,6 @@ Accuracy of the learned model:
 * **Overfitting:** The model is highly accurate on the training set, but performs poorly on the testing set. Results from using an overly complex model that fits the noise in the input data.
 
 * **Underfitting:** The model performs poorly on the training set and on the testing set. Results from using a model that is not complex enough to model that quantity of interest.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** For more metrics, see [http://scikit-learn.org/stable/modules/model_evaluation.html](http://scikit-learn.org/stable/modules/model_evaluation.html).
 
 
 ### Interpretable vs black-box models
