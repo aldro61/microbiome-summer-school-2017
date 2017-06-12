@@ -114,7 +114,7 @@ make basics.svm.regularization
 
 * Take a look at [the code](http://todo.com) to see how it's done.
 
-> **Solution:** [click me](http://test.com)
+**Solution:** [click me](http://test.com)
 
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** You run a panel of learning algorithms on your favorite binary classification data set and obtain the following accuracies.
@@ -126,9 +126,9 @@ make basics.svm.regularization
 
 Which algorithms are overfitting or underfitting?
 
-> **Solution:** [click me](http://test.com)
+**Solution:** [click me](http://test.com)
 
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Give them a model that is overfitting because too complex and ask them to fix it.
 
-> **Solution:** [click me](http://test.com)
+**Solution:** [click me](http://test.com)
