@@ -75,6 +75,13 @@ Many metrics can be used to measure the correctness of a model's predictions. In
 
 #### Overfitting and Underfitting
 
+* **Overfitting:** The model is highly accurate on the training set, but performs poorly on the testing set. Results from using an overly complex model that fits the noise in the input data.
+
+* **Underfitting:** The model performs poorly on the training set and on the testing set. Results from using a model that is not complex enough to model that quantity of interest.
+
+![Alt text](./figures/over_under_fitting.png)
+Source: [http://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html](http://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html)
+
 Accuracy of the learned model:
 
 |              	| Overfitting 	| Underfitting 	|
@@ -82,9 +89,9 @@ Accuracy of the learned model:
 | Training Set 	| Good        	| Poor         	|
 | Testing Set  	| Poor        	| Poor         	|
 
-* **Overfitting:** The model is highly accurate on the training set, but performs poorly on the testing set. Results from using an overly complex model that fits the noise in the input data.
+Learning algorithms generally have **regularization** hyperparameters, which are used to limit overfitting. For example, the maximum depth of a decision tree.
 
-* **Underfitting:** The model performs poorly on the training set and on the testing set. Results from using a model that is not complex enough to model that quantity of interest.
+
 
 
 ### Interpretable vs black-box models
