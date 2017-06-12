@@ -89,7 +89,7 @@ Source: [http://scikit-learn.org/stable/auto_examples/model_selection/plot_under
 | Training Set 	| Good        	| Poor         	|
 | Testing Set  	| Poor        	| Poor         	|
 
-
+<br />
 Learning algorithms generally have **regularization** hyperparameters, which are used to limit overfitting. For example, the maximum depth of a decision tree.
 
 
@@ -125,6 +125,7 @@ make basics.svm.regularization
 | Training Set | 60%        | 90%     | 88%                 |
 | Testing Set  | 60%        | 70%     | 85%                 |
 
+<br />
 Which algorithms are overfitting or underfitting?
 
 **Solution:** [click me](http://test.com)
