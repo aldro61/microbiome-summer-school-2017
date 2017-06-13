@@ -106,7 +106,7 @@ Compare various types of models. Use the figure where we see the decision bounda
 
 ### Exercises
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** Train a Support Vector Machine Classifier on the Iris data set using 5-fold cross-validation to choose the value of it's regularization hyperparameter. Use the following command:
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** Train a [RBF kernel Support Vector Machine Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) on the Iris data set using 5-fold cross-validation to choose the value of it's regularization hyperparameter. Use the following command:
 
 ```bash
 make basics.svm.regularization
@@ -116,7 +116,7 @@ make basics.svm.regularization
 
 * Why are the training and cross-validation accuracies greater than the testing set accuracy?
 
-* Take a look at [the code](http://todo.com) to see how it's done.
+* Take a look at [the code](http://todo.com) to see how it's done. Notice that the kernel also has a hyperparameter (gamma).
 
 **Solution:** [click me](http://test.com)
 
