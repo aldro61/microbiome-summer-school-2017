@@ -7,11 +7,15 @@ Inspired by http://scikit-learn.org/stable/auto_examples/model_selection/plot_un
 """
 import matplotlib.pyplot as plt
 import numpy as np
+
 from matplotlib.widgets import Slider
-from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split, cross_val_score, KFold
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
 
 
-MAX_DEGREE = 30
+MAX_DEGREE = 20
 
 class DiscreteSlider(Slider):
     """
@@ -48,48 +52,51 @@ class DiscreteSlider(Slider):
             func(discrete_val)
 
 
-class ChangingPlot(object):
+def fit_linear_regression(X, y, degree):
+    return Pipeline([("polynomial_features", PolynomialFeatures(degree=degree,
+                                                                include_bias=False)),
+                     ("linear_regression", LinearRegression())]
+                    ).fit(X, y)
+
+
+class ModelSelectionPlot(object):
     def __init__(self, n_samples, random_state):
         self.inc = 1.0
 
         self.fig, (self.ax1, self.ax2) = plt.subplots(ncols=2)
-        self.sliderax = self.fig.add_axes([0.2, 0.02, 0.6, 0.03],
-                                          axisbg='yellow')
+        self.sliderax = self.fig.add_axes([0.2, 0.02, 0.6, 0.03], facecolor="lightgray")
 
         self.slider = DiscreteSlider(self.sliderax, 'Degree', 1, MAX_DEGREE,
                                      increment=self.inc, valinit=self.inc)
         self.slider.on_changed(self.update)
         self.slider.drawon = False
 
+        # Generate training and testing data
         true_fun = lambda X: np.cos(1.5 * np.pi * X)
-        self.X = np.sort(random_state.rand(n_samples))
-        self.y = true_fun(self.X) + random_state.randn(n_samples) * 0.1
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, train_size=0.5,
+        X = random_state.rand(n_samples)
+        y = true_fun(X) + random_state.randn(n_samples) * 0.1
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, train_size=0.5,
                                                                                 random_state=random_state)
         self.X_train = self.X_train.reshape(-1, 1)
         self.X_test = self.X_test.reshape(-1, 1)
 
+        # Plot the data
         self.ax1.plot(self.X_train, self.y_train, 'bo', markersize=5, label="Train")
         self.ax1.plot(self.X_test, self.y_test, 'ro', markersize=5, label="Test")
-        x_draw = np.linspace(0, 1, 100)
-        self.ax1.plot(x_draw, true_fun(x_draw), label="True function")
+        x_draw_sampling = np.linspace(0, 1, 100)
+        self.ax1.plot(x_draw_sampling, true_fun(x_draw_sampling), label="True function")
 
-        from sklearn.pipeline import Pipeline
-        from sklearn.preprocessing import PolynomialFeatures
-        from sklearn.linear_model import LinearRegression
-        polynomial_features = PolynomialFeatures(degree=1,
-                                                 include_bias=False)
+        # Train the learning algorithm using degree = 1
+        estimator = fit_linear_regression(self.X_train, self.y_train, degree=1)
+        x_draw_sampling = np.linspace(0, 1, 100).reshape(-1, 1)
+        self.model_plot, = self.ax1.plot(x_draw_sampling, estimator.predict(x_draw_sampling), label="Model")
 
-        linear_regression = LinearRegression()
-        pipeline = Pipeline([("polynomial_features", polynomial_features),
-                             ("linear_regression", linear_regression)])
-        pipeline.fit(self.X_train.reshape(-1, 1), self.y_train)
-        x_draw = np.linspace(0, 1, 100).reshape(-1, 1)
-        self.model, = self.ax1.plot(x_draw, pipeline.predict(x_draw), label="Model")
-
-        self.training_risks, = self.ax2.plot([1], [pipeline.score(self.X_train, self.y_train)], label="Training set", markersize=5)
-        self.testing_risks, = self.ax2.plot([1], [pipeline.score(self.X_test, self.y_test)], label="Testing set", markersize=5)
-        self.vertical_degree = self.ax2.axvline(1, linestyle="--", color="red")
+        # Plot the accuracy of the learned model
+        self.train_score_plot, = self.ax2.plot([1], [estimator.score(self.X_train, self.y_train)], label="Training set", 
+                                               markersize=5)
+        self.test_score_plot, = self.ax2.plot([1], [estimator.score(self.X_test, self.y_test)], label="Testing set", 
+                                              markersize=5)
+        self.degree_marker = self.ax2.axvline(1, linestyle="--", color="red")
 
         # Left subplot formatting
         self.ax1.set_xlabel("X")
@@ -100,51 +107,43 @@ class ChangingPlot(object):
         # Right subplot formatting
         self.ax2.set_xlabel("Degree")
         self.ax2.set_ylabel("Coefficient of determination ($r^2$)")
-        self.ax2.set_xlim([0, MAX_DEGREE])
-        self.ax2.set_ylim([0, 1])
+        self.ax2.set_xlim([1, MAX_DEGREE])
+        self.ax2.set_ylim([0.5, 1])
         self.ax2.set_title("Accuracy")
         self.ax2.legend()
 
+        # Main plot formatting
         plt.suptitle("Use the slider to explore different values of the degree hyperparameter")
 
 
-    def update(self, value):
-        from sklearn.pipeline import Pipeline
-        from sklearn.preprocessing import PolynomialFeatures
-        from sklearn.linear_model import LinearRegression
-        polynomial_features = PolynomialFeatures(degree=int(value),
-                                                 include_bias=False)
-
-        linear_regression = LinearRegression()
-        pipeline = Pipeline([("polynomial_features", polynomial_features),
-                             ("linear_regression", linear_regression)])
-        pipeline.fit(self.X_train.reshape(-1, 1), self.y_train)
+    def update(self, degree):
+        # Train the algorithm with the specified degree and plot its predictions
+        estimator = fit_linear_regression(self.X_train, self.y_train, degree=int(degree))
         x_draw = np.linspace(0, 1, 100)
-        self.model.set_data(x_draw, pipeline.predict(x_draw.reshape(-1, 1)))
-
-        t1, t2 = self.training_risks.get_data()
-        t1 = np.hstack((t1, [value]))
-        t2 = np.hstack((t2, [pipeline.score(self.X_train, self.y_train)]))
-        sorter = t1.argsort()
-        t1 = t1[sorter]
-        t2 = t2[sorter]
-        self.training_risks.set_data(t1, t2)
-
-        t1, t2 = self.testing_risks.get_data()
-        t1 = np.hstack((t1, [value]))
-        t2 = np.hstack((t2, [pipeline.score(self.X_test, self.y_test)]))
-        sorter = t1.argsort()
-        t1 = t1[sorter]
-        t2 = t2[sorter]
-        self.testing_risks.set_data(t1, t2)
-
-        self.vertical_degree.set_data([value, value], self.vertical_degree.get_data()[1])
-
-        self.slider.valtext.set_text('{}'.format(value))
+        self.model_plot.set_data(x_draw, estimator.predict(x_draw.reshape(-1, 1)))
+        
+        # Update the score plots
+        def _update_score_plot(score_plot, new_score):
+            t1, t2 = score_plot.get_data()
+            t1 = np.hstack((t1, [degree]))
+            t2 = np.hstack((t2, [new_score]))
+            sorter = t1.argsort()
+            t1 = t1[sorter]
+            t2 = t2[sorter]
+            score_plot.set_data(t1, t2)
+        _update_score_plot(self.train_score_plot, estimator.score(self.X_train, self.y_train))
+        _update_score_plot(self.test_score_plot, estimator.score(self.X_test, self.y_test))
+        
+        # Place the vertical marker at the current degree
+        self.degree_marker.set_data([degree, degree], self.degree_marker.get_data()[1])
+        
+        # Update the slider's text and redraw the figure
+        self.slider.valtext.set_text('{}'.format(degree))
         self.fig.canvas.draw()
 
     def show(self):
         plt.show()
 
-p = ChangingPlot(50, np.random.RandomState(1))
-p.show()
+
+if __name__ == "__main__":
+    ModelSelectionPlot(n_samples=50, random_state=np.random.RandomState(1)).show()
