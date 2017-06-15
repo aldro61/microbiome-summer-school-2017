@@ -22,7 +22,7 @@ from sklearn.metrics import mean_squared_error
 
 data_path = "/Users/alexandre/dev/git/microbiome-summer-school-2017/exercises/data/peptide/"
 KERNEL_MATRIX_CACHE = os.path.join(data_path, "gs_kernel_matrix_cache.h5")
-
+PHYSICOCHEMICAL_PROPERTY_FILE = os.path.join(data_path, "amino_acids_matrix/AA.blosum50.dat")
 
 
 def sequences_to_vec(sequences, length=3):
@@ -64,7 +64,7 @@ def cross_validation_gs_kernel(seq, is_train, folds):
                 K = kernel_cache[kernel_matrix_id][...]
             else:
                 K = gs_gram_matrix(seq, seq,
-                                   amino_acid_property_file="../data/peptide/amino_acids_matrix/AA.blosum50.dat",
+                                   amino_acid_property_file=PHYSICOCHEMICAL_PROPERTY_FILE,
                                    sigma_position=sigma_pos,
                                    sigma_amino_acid=sigma_aa,
                                    substring_length=substring_length)
