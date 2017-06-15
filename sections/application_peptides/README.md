@@ -4,4 +4,5 @@ Use a data set from the work of Giguère et al. to show them a sequence-based re
 
 Use dataset DRB1*1101.
 
-![Alt text](./figures/gs_kernel.png)
+An example kernel matrix for
+<a href="figures/gs_kernel_high_res.png"><img src="figures/gs_kernel_low_res.png") width="90%" /></a>
