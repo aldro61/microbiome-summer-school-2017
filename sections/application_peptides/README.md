@@ -27,7 +27,7 @@ Lets begin the demonstration. First, have a look at the data by running the foll
 ```bash
 head ./data/peptide/DRB1_0701.dat
 ```
-This will print the first 10 learning examples. Observe that our learning examples are peptide sequences and a real-valued number, i.e., their binding affinities.
+This will print the first 10 learning examples. The format is `MHC_ALLELE PEPTIDE BINDING_AFFINITY`.
 
 Now, we will use these data to train the learning algorithm. Run the following command.
 
