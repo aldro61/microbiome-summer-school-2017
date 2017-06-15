@@ -2,9 +2,57 @@
 
 # Application: peptide protein binding affinity prediction
 
-Use a data set from the work of Giguère et al. to show them a sequence-based regression problem. Use various algorithms: decision tree regression, kernel SVM and nearest neighbour. Benchmark their prediction accuracy using figures and make them notice the key differences between the algorithms. Explain why some work better than the others.
+In this part of the tutorial, we will cover an application of kernel methods to predicting the binding affinity of peptides to the MHC-II. We will use data from the work of Giguère et al. (2013)
 
-Use dataset DRB1*1101.
+## Kernels
 
-An example kernel matrix for
+A kernel is a function that **measures the similarity** between two learning examples. Such functions must have some strict mathematical properties, which go beyond the scope of this tutorial ([see here](https://en.wikipedia.org/wiki/Kernel_method#Mathematics:_the_kernel_trick)). For our purpose, it is sufficient to know that:
+
+1. Kernels can be designed to compare **complex data structures** (e.g., images, DNA/protein sequences, etc.).
+2. The similarity measures can be based on relevant **domain knowledge**. For instance, when comparing **amino acid sequences**, it might be relevant to account for their **physicochemical properties**.
+
+Hence, they essentially allow the application of some machine learning algorithms (e.g., support vector machines, ridge regression, principal component analysis, etc.) to very complex data structures.
+
+
+## Demonstration
+
+In this example, we will model the binding affinity of short peptides and the MHC-II. We will use Support Vector Regression, a regression learning algorithm, combined with a kernel for peptide sequences: the **generic string kernel** (Giguère et al., 2013). The latter measures the similarity between peptides based on:
+
+1. An **alignment** of their substrings
+2. The **physicochemical properties** of their constituent amino acids
+
+
+Lets begin the demonstration. Start by running the following command:
+
+```bash
+make applications.peptide.binding
+```
+
+This will:
+
+1. Load a data set of 853 peptides and their measured binding affinities to the DRB1:0701 MHC-II allele
+2. Split the data set into a training and testing set
+3. Perform 5-fold cross-validation to set the hyperparameters of the kernel and the learning algorithm
+4. Generate figures that we will use to interpret the results
+
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** The first figure to be plotted should be a visualization of the kernel matrix obtained using the hyperparameter values selected by cross-validation (see below). The similarity between each pair of peptides is shown. Moreover, a hierarchical clustering was used to order the peptides. Notice the presence of clusters of peptides that are more similar to each other (e.g., lower right corner).
+
 <a href="figures/gs_kernel_high_res.png" target="_blank"><img src="figures/gs_kernel_low_res.png" width="90%" /></a>
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** The generic string kernel's hyperparameters allow to **tune the importance** of the **alignment** and the **physicochemical** properties in the similarity measure. The next figure that will be generated compares the results obtained by considering 1) only the alignment, 2) only the physicochemical properties, 3) both the alignment and physicochemical properties. This illustrates how **domain knowledge** can be used to **increase the accuracy** of a learning algorithm.
+
+<img src="figures/gs_variants_high_res.png" width="80%" />
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Finally, we compare the results obtained with the generic string kernel to those obtained using a *spectrum kernel* (CITE). Unlike the generic string kernel, the spectrum kernel does not consider an alignment or physicochemical properties. It calculates the similarity between two amino acid sequences based on the counts of *k*-mers, which are sequences of *k* amino acids.
+
+<img src="figures/gs_vs_spectrum_high_res.png" width="80%" />
+
+## References
+Giguère, S., Marchand, M., Laviolette, F., Drouin, A., & Corbeil, J. (2013). Learning a peptide-protein binding affinity predictor with kernel ridge regression. BMC bioinformatics, 14(1), 82.
+
+## TODO
+
+* gs kernel installation script
+* precomputed kernel matrices?
+* reference for spectrum kernel
