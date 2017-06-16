@@ -22,6 +22,7 @@ Hence, they essentially allow the application of some machine learning algorithm
 In this example, we will model the binding affinity of short peptides and the MHC-II. We will use [Support Vector Regression](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html), a regression learning algorithm, combined with a kernel for peptide sequences: the **generic string kernel** (Giguère et al., 2013). The latter measures the similarity between peptides based on:
 
 1. An **alignment** of their substrings
+
 2. The **physicochemical properties** of their constituent amino acids
 
 
@@ -41,8 +42,12 @@ make applications.peptide.binding
 This will:
 
 1. Load a data set of 853 peptides and their measured binding affinities to the DRB1:0701 MHC-II allele
+
 2. Split the data set into a training and testing set
-3. Perform 5-fold cross-validation to set the hyperparameters of the kernel and the learning algorithm
+
+3. Perform 5-fold cross-validation to set the hyperparameters of the 
+kernel and the learning algorithm
+
 4. Generate figures that we will use to interpret the results
 
 
