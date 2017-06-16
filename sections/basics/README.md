@@ -106,34 +106,38 @@ Compare various types of models. Use the figure where we see the decision bounda
 
 ### Exercises
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** Train a [RBF kernel Support Vector Machine Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) on the Iris data set using 5-fold cross-validation to choose the value of it's regularization hyperparameter. Use the following command:
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** In this exercise, we will see how the complexity of the learned model affects overfitting and underfitting. We use [linear regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) combined with [polynomial features](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) of various degrees. Polynomial features allow to model non-linear functions with linear models. For instance, supposing that all examples are represented by a single feature ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5Bx_1%5D) the corresponding polynomial features for a degree of 3 are ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5C%5B1%2C%20x_1%2C%20x_1%5E2%2C%20x_1%5E3%5C%5D).
+
+
+
+Run the following command to start the interactive visualization.
 
 ```bash
-make basics.svm.regularization
+make basics.model.complexity
 ```
 
-* Based on the plot, which value should we choose for the regularization hyperparameter?
+Move the slider at the bottom of the plot to control the degree of the polynomial features. As the degree increases, so does the complexity of the learned model.
 
-* Why are the training and cross-validation accuracies greater than the testing set accuracy?
+1. Can you find a value of the degree hyperparameter that leads to underfitting?
 
-* Take a look at [the code](http://todo.com) to see how it's done. Notice that the kernel also has a hyperparameter (gamma).
+2. Can you find a value of the degree hyperparameter that leads to overfitting?
 
-**Solution:** [click me](http://test.com)
-
-
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** You run a panel of learning algorithms on your favorite binary classification data set and obtain the following accuracies.
-
-|              | Linear SVM | RBF SVM | 5-Nearest Neighbour |
-|--------------|------------|---------|---------------------|
-| Training Set | 60%        | 90%     | 88%                 |
-| Testing Set  | 60%        | 70%     | 85%                 |
+3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?
 
 <br />
-Which algorithms are overfitting or underfitting?
 
-**Solution:** [click me](http://test.com)
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Train a [RBF kernel Support Vector Machine Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) on the [breast cancer](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) data set from the UCI repository. To do so, run the following command.
 
+```bash
+make basics.model.selection
+```
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Give them a model that is overfitting because too complex and ask them to fix it.
+1. Is the accuracy on the training set a good estimator of the accuracy on the testing set?
+
+2. Given the information at hand, which combination of hyperparameters should you choose? Why?
+
+3. Do some hyperparameter combinations lead to overfitting? Give an example.
+
+4. Do some hyperparameter combinations lead to underfitting? Give an example.
 
 **Solution:** [click me](http://test.com)
