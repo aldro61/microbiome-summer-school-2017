@@ -21,6 +21,12 @@ Clone the GitHub repository for the tutorial:
 git clone https://github.com/aldro61/microbiome-summer-school-2017.git microbiome-ml-tutorial
 ```
 
+Then, go to the exercise directory:
+
+```bash
+cd microbiome-ml-tutorial/exercise
+```
+
 Install the dependencies for the tutorial by running the following command:
 
 ```bash
