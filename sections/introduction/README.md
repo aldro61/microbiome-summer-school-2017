@@ -15,7 +15,24 @@ This tutorial is an introduction to machine learning in Python. We will rely hea
  
 ## Getting started
 
-Explain where to find the code and the data. How the practical session will be organized.
+Clone the GitHub repository for the tutorial:
+ 
+```bash
+git clone https://github.com/aldro61/microbiome-summer-school-2017.git microbiome-ml-tutorial
+```
+
+Install the dependencies for the tutorial by running the following command:
+
+```bash
+sudo apt-get install virtualenv && \
+virtualenv env && \
+source ./env/bin/activate && \
+pip install numpy --upgrade && \
+pip install scipy --upgrade && \
+pip install matplotlib --upgrade && \
+pip install scikit-learn --upgrade && \
+pip install seaborn --upgrade
+```
 
 ## Objectives
 
