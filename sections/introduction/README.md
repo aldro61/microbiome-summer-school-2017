@@ -33,11 +33,7 @@ Install the dependencies for the tutorial by running the following command:
 sudo apt-get install virtualenv && \
 virtualenv env && \
 source ./env/bin/activate && \
-pip install numpy --upgrade && \
-pip install scipy --upgrade && \
-pip install matplotlib --upgrade && \
-pip install scikit-learn --upgrade && \
-pip install seaborn --upgrade
+pip install numpy scipy matplotlib scikit-learn seaborn --upgrade
 ```
 
 ## Objectives
