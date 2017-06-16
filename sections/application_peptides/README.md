@@ -9,7 +9,10 @@ In this part of the tutorial, we will cover an application of kernel methods to 
 A kernel is a function that **measures the similarity** between two learning examples. Such functions must have some strict mathematical properties, which go beyond the scope of this tutorial ([see here](https://en.wikipedia.org/wiki/Kernel_method#Mathematics:_the_kernel_trick)). For our purpose, it is sufficient to know that:
 
 1. Kernels can be designed to compare **complex data structures** (e.g., images, DNA/protein sequences, etc.).
+
 2. The similarity measures can be based on relevant **domain knowledge**. For instance, when comparing **amino acid sequences**, it might be relevant to account for their **physicochemical properties**.
+
+3. Like the polynomial features that we used in the previous section, they allow to **learn non-linear functions** using **linear models**.
 
 Hence, they essentially allow the application of some machine learning algorithms (e.g., support vector machines, ridge regression, principal component analysis, etc.) to very complex data structures.
 
@@ -47,9 +50,13 @@ This will:
 
 <a href="figures/gs_kernel_high_res.png" target="_blank"><img src="figures/gs_kernel_low_res.png" width="90%" /></a>
 
+<br />
+
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** The generic string kernel's hyperparameters allow to **tune the importance** of the **alignment** and the **physicochemical** properties in the similarity measure. The next figure that will be generated compares the results obtained by considering 1) only the alignment, 2) only the physicochemical properties, 3) both the alignment and physicochemical properties. This illustrates how **domain knowledge** can be used to **increase the accuracy** of a learning algorithm.
 
 <img src="figures/gs_variants_high_res.png" width="80%" />
+
+<br />
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Finally, we compare the results obtained with the generic string kernel to those obtained using a *spectrum kernel* (CITE). Unlike the generic string kernel, the spectrum kernel does not consider an alignment or physicochemical properties. It calculates the similarity between two amino acid sequences based on the counts of *k*-mers, which are sequences of *k* amino acids.
 
