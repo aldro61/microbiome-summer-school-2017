@@ -51,7 +51,7 @@ kernel and the learning algorithm
 4. Generate figures that we will use to interpret the results
 
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** The first figure to be plotted should be a visualization of the kernel matrix obtained using the hyperparameter values selected by cross-validation (see below). The similarity between each pair of peptides is shown. Moreover, a hierarchical clustering was used to order the peptides. Notice the presence of clusters of peptides that are more similar to each other (e.g., lower right corner).
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** The first figure to be plotted is a visualization of the kernel matrix obtained using the hyperparameter values selected by cross-validation (see below). The similarity between each pair of peptides is shown. Moreover, a hierarchical clustering was used to order the peptides. Notice the presence of clusters of peptides that are more similar to each other (e.g., lower right corner).
 
 <a href="figures/gs_kernel_high_res.png" target="_blank"><img src="figures/gs_kernel_low_res.png" width="90%" /></a>
 
