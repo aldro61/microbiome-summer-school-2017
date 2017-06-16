@@ -58,7 +58,7 @@ This will:
 
 <br />
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Finally, we compare the results obtained with the generic string kernel to those obtained using a *spectrum kernel* (CITE). Unlike the generic string kernel, the spectrum kernel does not consider an alignment or physicochemical properties. It calculates the similarity between two amino acid sequences based on the counts of *k*-mers, which are sequences of *k* amino acids.
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Finally, we compare the results obtained with the generic string kernel to those obtained using a *spectrum kernel* (Leslie et al., 2002). Unlike the generic string kernel, the spectrum kernel does not consider an alignment or physicochemical properties. It calculates the similarity between two amino acid sequences based on the counts of *k*-mers, which are sequences of *k* amino acids.
 
 <img src="figures/gs_vs_spectrum_high_res.png" width="80%" />
 
@@ -67,8 +67,8 @@ The generic string kernel yields more accurate results. However, there is still 
 ## References
 Giguère, S., Marchand, M., Laviolette, F., Drouin, A., & Corbeil, J. (2013). Learning a peptide-protein binding affinity predictor with kernel ridge regression. BMC bioinformatics, 14(1), 82. [[link]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-82)
 
+Leslie, C. S., Eskin, E., & Noble, W. S. (2002, January). The spectrum kernel: A string kernel for SVM protein classification. In Pacific symposium on biocomputing (Vol. 7, No. 7, pp. 566-575). [[link]](http://psb.stanford.edu/psb-online/proceedings/psb02/leslie.pdf)
+
 ## TODO
 
 * gs kernel installation script
-* precomputed kernel matrices?
-* reference for spectrum kernel
