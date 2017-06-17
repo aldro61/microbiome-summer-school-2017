@@ -14,8 +14,7 @@
     5. [Interpretable vs black-box models](sections/basics/#interpretable-vs-black-box-models)
 3. [Application: peptide protein binding affinity prediction](sections/application_peptides/)
 4. [Application: predicting antibiotic resistance](sections/application_antibiotics/)
-5. [Bonus: machine learning competition](sections/competition/)
-6. [Conclusion](sections/conclusion/)
+5. [Conclusion](sections/conclusion/)
 
 ---
 
