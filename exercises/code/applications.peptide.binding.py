@@ -20,7 +20,7 @@ from itertools import product
 from sklearn.metrics import mean_squared_error
 
 
-data_path = "/Users/alexandre/dev/git/microbiome-summer-school-2017/exercises/data/peptide/"
+data_path = "./data/peptide/"
 KERNEL_MATRIX_CACHE = os.path.join(data_path, "gs_kernel_matrix_cache.h5")
 PHYSICOCHEMICAL_PROPERTY_FILE = os.path.join(data_path, "amino_acids_matrix/AA.blosum50.dat")
 
