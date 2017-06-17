@@ -36,6 +36,13 @@ source ./env/bin/activate && \
 pip install numpy scipy matplotlib scikit-learn seaborn --upgrade
 ```
 
+Start the download of the supplementary data by running the following command:
+
+```bash
+make download.data
+```
+
+
 ## Objectives
 
 After completing this tutorial, you should have acquired the following skills:

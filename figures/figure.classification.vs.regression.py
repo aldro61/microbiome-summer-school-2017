@@ -71,4 +71,4 @@ ax2.set_title("Regression")
 make_regression_example(ax2, random_state)
 
 plt.savefig("figure.classification.vs.regression.png", bbox_inches="tight", dpi=300)
-
+plt.savefig("figure.classification.vs.regression.pdf", bbox_inches="tight")

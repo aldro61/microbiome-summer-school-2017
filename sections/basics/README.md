@@ -70,7 +70,7 @@ Many metrics can be used to measure the correctness of a model's predictions. In
 
 * **Classification:** we will use the [**accuracy**](http://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score), which is the proportion of correct predictions in a set of examples (best: 1, worst: 0).
 
-* **Regression:** we will use the [**mean squared error**](https://en.wikipedia.org/wiki/Mean_squared_error), which is the average of the squared deviations, i.e. the difference between what is expected and what is predicted.
+* **Regression:** we will use the [**coefficient of determination**](https://en.wikipedia.org/wiki/Coefficient_of_determination), which measures the proportion of the variance in the target values that is explained by the model (best: 1, worst: 0).
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Note:** For more metrics, see [http://scikit-learn.org/stable/modules/model_evaluation.html](http://scikit-learn.org/stable/modules/model_evaluation.html).
 
@@ -126,7 +126,7 @@ Move the slider at the bottom of the plot to control the degree of the polynomia
 
 <br />
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Train a [RBF kernel Support Vector Machine Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) on the [breast cancer](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) data set from the UCI repository. To do so, run the following command.
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Train a [RBF kernel Support Vector Machine](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) classifier on the [breast cancer](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) data set from the UCI repository. To do so, run the following command.
 
 ```bash
 make basics.model.selection
