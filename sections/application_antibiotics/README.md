@@ -1,3 +1,5 @@
+<a href="../../#table-of-contents"><-- Back to table of contents</a>
+
 # Application: predicting antibiotic resistance
 
 In this part of the tutorial, we will model the resistance of 353 ***Clostridium difficile*** isolates to clindamycin, a lincosamide antibiotic. We will use the Set Covering Machine algorithm (Marchand and Shawe-Taylor, 2002), which produces sparse interpretable models, and a Support Vector Machine, which produces a *black-box* model.
