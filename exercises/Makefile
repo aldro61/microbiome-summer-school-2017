@@ -8,7 +8,7 @@ basics.model.selection: code/basics.model.selection.py
 applications.peptide.binding: code/applications.peptide.binding.py
 	@python $<
 download.data:
-	@wget -b http://graal.ift.ulaval.ca/adrouin/ml-tutorial/cdiff_clindamycin.kover -P ./data/antibiotics
+	@wget -bN http://graal.ift.ulaval.ca/adrouin/ml-tutorial/cdiff_clindamycin.kover -P ./data/antibiotics
 download.verify:
 ifeq ($(UNAME), Linux)
 	@md5sum -c <<<"f0b7bcf295f370da3440198ada98e104 ./data/antibiotics/cdiff_clindamycin.kover"
