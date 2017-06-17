@@ -5,5 +5,4 @@
 
 Add a script that automatically installs all dependencies and make them run it at the start of the tutorial.
 
-**download additional data**
 

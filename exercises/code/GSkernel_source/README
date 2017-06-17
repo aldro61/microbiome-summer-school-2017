@@ -1,0 +1,147 @@
+---------------------------------------------------------------------
+Copyright 2011, 2012, 2013 Sébastien Giguère
+
+This file is part of GSkernel
+
+GSkernel is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+GSkernel is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with GSkernel.  If not, see <http://www.gnu.org/licenses/>.
+---------------------------------------------------------------------
+
+For questions, bug reports, commercial applications
+please contact author at sebastien.giguere.8@ulaval.ca
+
+-------
+Version
+-------
+
+This is version 1.1 of the GS kernel, released 2013-05-10
+
+Change log:
+- Version 1.1 The fast implementation is now faster
+- Version 1.0 First release
+
+-------
+Information
+-------
+
+This module will compute a square positive semi-define gram matrix or a
+possibly rectangle matrix (for testing examples) using the GS kernel.
+
+-------
+Files and folders
+-------
+
+amino_acids_matrix/: Contains several amino acids property matrices from the literature.
+
+gs_kernel.py: A fast implementation of the GS kernel that use Cython technology.
+
+gs_kernel_slow.py: A not so fast pure python implementation of the GS kernel
+
+gs_kernel_cython.pyx, GSkernel_fast.c: The Cython back-end of the kernel
+
+build.py: A build script that to compile the Cython back-end.
+
+build_without_cython.py: A build script to compile GSkernel_fast.c if you do not have Cython installed.
+
+Zhou2010_cationic.dat, Zhou2010_bradykinin.dat: Sequences from Zhou P, Chen X, Wu Y, Shang Z: Gaussian process: an alternative approach for QSAM modeling of peptides. Amino Acids 2010
+
+-------
+How to install
+-------
+
+To ease the utilization, we have programmed a pure python implementation of the GS kernel and very optimized version in Cython that is approximately 500 times faster than the pure python version.
+
+We thus recommend to use the fast version for dataset over 100 examples.
+
+To install the GS kernel as a python module (*recommended*), simply run the following command:
+> sudo python setup.py install
+
+-------
+
+If you do not wish to install the GS kernel as a python module you can
+build the cython back-end using either the build.py or build_without_cython.py script:
+
+If you have cython installed you can compile the back-end with the following command:
+> python build.py build_ext -b gs_kernel/
+
+To install the latest Cython version using easy_install:
+> sudo easy_install cython
+
+or using your package manager:
+> sudo apt-get install cython
+
+If you do not want to install Cython simply compile the back-end with:
+> python build_without_cython.py build_ext -b gs_kernel/
+
+There should not be any performance difference between both compilation methods.
+
+-------
+About Cython
+-------
+
+Cython is a language that makes writing C extensions for the Python language as easy as Python itself. It is based on the well-known Pyrex, but supports more cutting edge functionality and optimizations.
+
+The Cython language is a superset of the Python language that additionally supports calling C functions and declaring C types on variables and class attributes. This allows the compiler to generate very efficient C code from Cython code. The C code is generated once and then compiles with all major C/C++ compilers in CPython 2.4 and later, including Python 3.x.
+
+http://cython.org/
+
+gs_kernel_cython.c was generated using Cython 0.19 if your version of Cython is earlier that 0.19 we recommend to build with the "without_cython" script.
+
+-------
+Usage
+-------
+
+The easiest way to use the GS is trough the gs_gram_matrix function:
+> from gs_kernel.gs_kernel import gs_gram_matrix
+
+-------
+
+We also provide a command line interface:
+
+This module accept two files containing sequences. To obtain a square matrix
+for training your algorithm you need to provide the training sequences twice.
+To obtain a testing matrix first pass the training sequences then, the testing sequences.
+
+This module takes exactly 8-9 arguments in the following order:
+
+* Training sequences file path
+* Testing sequences file path (can be the same as training)
+* Amino acids property file path
+* Float value for \sigma_p. Controls the position uncertainty of sub-strings in the GS kernel.
+* Float value for \sigma_c. Controls the trade of between the amino-acids properties and the Dirac delta.
+* Integer value. Length of the sub-strings. Should be less than or equal to the length of the shortest sequence.
+* Boolean value (True/False). Normalize the gram matrix. (Recommended)
+**(only for GSkernel_fast.py) Boolean value (True/False). Approximate kernel value. Approximate _ONLY_ if you know what you are doing.
+
+Example:
+
+python gs_kernel_slow.py ../examples/data/Zhou2010_cationic.dat ../examples/data/Zhou2010_cationic.dat ../amino_acids_matrix/AA.blosum50.dat 1.0 1.0 2 True train_matrix
+
+The fast implementation works exactly the same way, except for the approximation switch:
+
+python gs_kernel.py ../examples/data/Zhou2010_cationic.dat ../examples/data/Zhou2010_cationic.dat ../amino_acids_matrix/AA.blosum50.dat 1.0 1.0 2 True False train_matrix
+
+-------
+More information
+-------
+
+All files have a good amount of comments to explain how everything works.
+Details of the kernel are published under the following title:
+
+Giguère, S., Marchand, M., Laviolette, F., Drouin, A., & Corbeil, J. (2012).
+Learning a peptide-protein binding affinity predictor with kernel ridge regression.
+
+If you have concerns, questions, comments ... well anything,
+contact the author at: sebastien.giguere.8@ulaval.ca
+
+

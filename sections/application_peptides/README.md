@@ -77,3 +77,4 @@ Leslie, C. S., Eskin, E., & Noble, W. S. (2002, January). The spectrum kernel: A
 ## TODO
 
 * gs kernel installation script
+* install cython in deps

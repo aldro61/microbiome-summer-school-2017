@@ -16,3 +16,8 @@ endif
 ifeq ($(UNAME), Darwin)
 	md5 -r ./data/antibiotics/cdiff_clindamycin.kover
 endif
+install.gskernel:
+	@cd code/GSkernel_source; \
+	python build.py build_ext -b gs_kernel/; \
+	cd ..; \
+	ln -s GSkernel_source/gs_kernel
