@@ -2,7 +2,7 @@
 
 # Application: predicting antibiotic resistance
 
-In this part of the tutorial, we will model the resistance of 141 ***Mycobacterium tuberculosis*** isolates to the [rifampicin](https://en.wikipedia.org/wiki/Rifampicin) antibiotic. We will use the Set Covering Machine algorithm (Marchand and Shawe-Taylor, 2002), which produces sparse interpretable models, and a Support Vector Machine, which produces a *black-box* model.
+In this part of the tutorial, we will model the resistance of 141 [***Mycobacterium tuberculosis***](https://en.wikipedia.org/wiki/Mycobacterium_tuberculosis) isolates to the [rifampicin](https://en.wikipedia.org/wiki/Rifampicin) antibiotic. We will use the Set Covering Machine algorithm (Marchand and Shawe-Taylor, 2002), which produces sparse interpretable models, and a Support Vector Machine, which produces a *black-box* model.
 
 To apply the Set Covering Machine algorithm, we will use [Kover](https://github.com/aldro61/kover/) (Drouin et al., 2016) a disk-based implementation of this algorithm designed to learn from large genomic datasets. Kover uses reference-free genome comparisons, based on k-mers to learn sparse and interpretable models of phenotypes. The models produced by Kover make predictions based on the presence/absence of k-mers. 
 
