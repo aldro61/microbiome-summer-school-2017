@@ -6,3 +6,9 @@
 Add a script that automatically installs all dependencies and make them run it at the start of the tutorial.
 
 
+TODO: 
+
+* interpretable models
+* make predictions figure nicer for gs
+* finish the resistance example
+* make sklearn example

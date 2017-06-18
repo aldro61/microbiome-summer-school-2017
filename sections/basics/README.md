@@ -104,6 +104,40 @@ Compare various types of models. Use the figure where we see the decision bounda
 
 ![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
 
+### Basic Scikit-learn syntax
+
+This code snippet trains a decision tree classifier on a randomly generated dataset, using cross-validation to select the hyperparameter values. Running learning algorithms on your data is really this simple with the `sklearn` package.
+
+```python
+from sklearn.datasets import make_classification
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split, GridSearchCV, KFold
+from sklearn.tree import DecisionTreeClassifier
+
+# Create a random dataset and partition it into a training and testing set
+X, y = make_classification(n_samples=100)
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
+
+# Define the candidate hyperparameter values
+params = dict(max_depth=[1, 3, 5, 10, 50, 100], min_samples_split=[2, 5, 10, 100])
+
+# Perform 5-fold cross-validation on the training set
+cv_protocol = KFold(n_splits=5, shuffle=True)
+cv = GridSearchCV(DecisionTreeClassifier(), param_grid=params, cv=cv_protocol)
+cv.fit(X_train, y_train)
+
+# Compute predictions on the testing set using the selected hyperparameters
+print("Accuracy:", accuracy_score(y_true=y_test, y_pred=cv.predict(X_test)))
+
+# You can also access the DecisionTreeClassifier using the best hyperparameters
+print("The model is:", cv.best_estimator_)
+
+# and the value of the selected hyperparameter values
+print("The selected hyperparameter values are:", cv.best_params_)
+```
+
+Scikit-learn's documentation offers many great examples and tutorials (see [here](http://scikit-learn.org/stable/auto_examples/index.html), [here](http://scikit-learn.org/stable/tutorial/index.html), and [here](http://scikit-learn.org/stable/user_guide.html)).
+
 ### Exercises
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** In this exercise, we will see how the complexity of the learned model affects overfitting and underfitting. We use [linear regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) combined with [polynomial features](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) of various degrees. Polynomial features allow to model non-linear functions with linear models. For instance, supposing that all examples are represented by a single feature ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5Bx_1%5D) the corresponding polynomial features for a degree of 3 are ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5C%5B1%2C%20x_1%2C%20x_1%5E2%2C%20x_1%5E3%5C%5D).
