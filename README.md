@@ -13,7 +13,7 @@
     4. [Assessing the accuracy of a model](sections/basics/#assessing-the-accuracy-of-a-model)
     5. [Interpretable vs black-box models](sections/basics/#interpretable-vs-black-box-models)
 3. [Application: peptide protein binding affinity prediction](sections/application_peptides/)
-4. [Application: predicting antibiotic resistance](http://aldro61.github.io/kover/doc_example.html)
+4. [Application: predicting antibiotic resistance](sections/application_antibiotics/)
 5. [Conclusion](sections/conclusion/)
 
 ---
