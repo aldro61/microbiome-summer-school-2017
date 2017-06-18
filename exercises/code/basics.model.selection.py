@@ -1,12 +1,12 @@
+import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
 
 from itertools import product
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.svm import SVC
-
-from sklearn.datasets import load_breast_cancer, make_classification, make_circles, load_iris
-from sklearn.model_selection import train_test_split, GridSearchCV, KFold, cross_val_score
 from sklearn.utils import shuffle
-from sklearn.preprocessing import StandardScaler
 
 random_state = np.random.RandomState(3)
 
@@ -33,8 +33,6 @@ for i in range(len(gamma_values)):
         data_cv[i, j] = np.mean(cross_val_score(estimator, X_train, y_train, cv=5, n_jobs=-1))
         data_test[i, j] = estimator.score(X_test, y_test)
 
-import matplotlib.pyplot as plt
-import seaborn as sns
 f, (ax1, ax2, ax3) = plt.subplots(ncols=3, sharex=True, sharey=True)
 sns.heatmap(data_train, ax=ax1, cbar=False, annot=True, annot_kws=dict(fontsize=6))
 sns.heatmap(data_cv, ax=ax2, cbar=False, annot=True, annot_kws=dict(fontsize=6))
