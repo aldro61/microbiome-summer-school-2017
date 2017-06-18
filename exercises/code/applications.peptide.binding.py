@@ -18,7 +18,7 @@ import warnings
 from gs_kernel.gs_kernel import gs_gram_matrix
 from itertools import product
 from sklearn.metrics import mean_squared_error
-
+from sklearn.svm import SVR as SupportVectorRegression
 
 data_path = "./data/peptide/"
 KERNEL_MATRIX_CACHE = os.path.join(data_path, "gs_kernel_matrix_cache.h5")
@@ -83,10 +83,6 @@ def cross_validation_gs_kernel(seq, is_train, folds):
                 fold_K_test = K_train[folds == fold][:, folds != fold]
                 fold_y_train = y_train[folds != fold]
                 fold_y_test = y_train[folds == fold]
-
-                from sklearn.svm import SVR as SupportVectorRegression
-                from sklearn.kernel_ridge import KernelRidge
-                # estimator = KernelRidgeRegression(lamb_da=C)
                 fold_estimator = SupportVectorRegression(kernel="precomputed", C=C)
                 fold_estimator.fit(fold_K_train.copy(), fold_y_train)
                 fold_scores.append(fold_estimator.score(fold_K_test, fold_y_test))
@@ -144,10 +140,6 @@ def cross_validation_spectrum_kernel(seq, is_train, folds):
             fold_K_test = K_train[folds == fold][:, folds != fold]
             fold_y_train = y_train[folds != fold]
             fold_y_test = y_train[folds == fold]
-
-            from sklearn.svm import SVR as SupportVectorRegression
-            from sklearn.kernel_ridge import KernelRidge
-            # estimator = KernelRidgeRegression(lamb_da=C)
             fold_estimator = SupportVectorRegression(kernel="precomputed", C=C)
             fold_estimator.fit(fold_K_train.copy(), fold_y_train)
             fold_scores.append(fold_estimator.score(fold_K_test, fold_y_test))
@@ -224,7 +216,7 @@ for ds in os.listdir(data_path):
     plt.scatter(y_test, best_result_spectrum["estimator"].predict(best_result_spectrum["K"]["test"]),
                 label="Spectrum [{0:.3f}]".format(
                     best_result_spectrum["estimator"].score(best_result_spectrum["K"]["test"], y_test)))
-    plt.plot([0, y_test.max()], [0, y_test.max()])
+    plt.plot([0, y_test.max()], [0, y_test.max()], color="black")
     plt.xlabel("True binding affinity")
     plt.ylabel("Predicted binding affinity")
     plt.legend()
