@@ -9,13 +9,15 @@ make basics.model.complexity
 
 Move the slider at the bottom of the plot to control the degree of the polynomial features. As the degree increases, so does the complexity of the learned model.
 
-1. Can you find a value of the degree hyperparameter that leads to underfitting?
+**1. Can you find a value of the degree hyperparameter that leads to underfitting?**
 
 Yes, the algorithms underfits with degree = 1 and degree = 2. 
 Its coefficient of determination is low both on the training and testing sets.
 We can also observe that the model does not properly capture the variation in the data.
 
-2. Can you find a value of the degree hyperparameter that leads to overfitting?
+![underfitting](./underfitting.png)
+
+**2. Can you find a value of the degree hyperparameter that leads to overfitting?**
 
 Yes, any values greater than 7 leads to overfitting. That is, the coefficient of determination is very high on the training set, 
 but very low on the testing set.
@@ -23,4 +25,4 @@ We can also observe that the algorithm fits the training data so well that the m
 
 
 
-3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?
+**3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?**
