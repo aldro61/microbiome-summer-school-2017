@@ -166,7 +166,7 @@ Move the slider at the bottom of the plot to control the degree of the polynomia
 
 3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?
 
-**Solution:** [click me](./solutions/model_selection/)
+**Solution:** [click me](./solutions/model_complexity/)
 
 <br />
 
