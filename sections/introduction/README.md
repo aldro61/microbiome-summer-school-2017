@@ -45,7 +45,8 @@ make download.data
 ## Objectives
 
 After completing this tutorial, you should have acquired the following skills:
-* Using Python to apply machine learning algorithms to data sets.
-* Understanding the various types of problems (regression, classification)
-* Perform machine learning experiments using correct protocols.
-* Applying learning algorithms to biological data
+
+* Understanding the various types of learning problems (regression, classification, etc.)
+* Performing machine learning experiments using correct protocols
+* Interpreting the results of machine learning experiments
+* Using Python to apply machine learning algorithms to biological datasets
