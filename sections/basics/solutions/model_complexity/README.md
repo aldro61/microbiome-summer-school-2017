@@ -23,6 +23,8 @@ Yes, any values greater than 7 leads to overfitting. That is, the coefficient of
 but very low on the testing set.
 We can also observe that the algorithm fits the training data so well that the model is fitted to random noise.
 
-
+![overfitting](./overfitting.png)
 
 **3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?**
+
+This is a trick question. In this example, we did not use cross-validation, so we cannot select a proper value for the degree hyperparameter. Selecting a value based on the testing set would lead to a biased estimation of the results, since the parameter would be selected to work well on the data used to evaluate the model's accuracy.
