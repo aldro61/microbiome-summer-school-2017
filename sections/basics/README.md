@@ -166,6 +166,8 @@ Move the slider at the bottom of the plot to control the degree of the polynomia
 
 3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?
 
+**Solution:** [click me](./solutions/model_selection/)
+
 <br />
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 2:** Train a [RBF kernel Support Vector Machine](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) classifier on the [breast cancer](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) data set from the UCI repository. To do so, run the following command.
@@ -182,4 +184,4 @@ make basics.model.selection
 
 4. Do some hyperparameter combinations lead to underfitting? Give an example.
 
-**Solution:** [click me](http://test.com)
+**Solution:** [click me](./solutions/model_selection/)
