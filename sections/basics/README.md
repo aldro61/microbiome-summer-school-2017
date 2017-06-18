@@ -100,7 +100,15 @@ Learning algorithms generally have **regularization** hyperparameters, which are
 
 ### Interpretable vs black-box models
 
-Compare various types of models. Use the figure where we see the decision boundary of many algorithms. Make them look at the coefficients of a linear model vs a simple decision tree model.
+The figure below shows the predictions of various learning algorithms for 3 datasets of varying complexity.
+
+* Notice that some models produce very complex decision boundaries (e.g., nearest neighbours), whereas some produce very simple boundaries (e.g., SCM-conjunction).
+
+* Some algorithms produce highly complex models that are difficult to interpret. For instance, the RBF SVM maps the data to a new feature space of very large dimensions and finds a linear separator that accurately classifies the data in this space.
+ 
+* In contrast, decision trees and SCMs learn models that rely on answering a series of questions of the form: "Is the value of feature #1 < 5?". This is much more interpretable.
+
+* Observe that complex models do not always lead to more accurate predictions (e.g., last row, Decision Tree performs as well as RBF SVM).
 
 ![Alt text](https://github.com/aldro61/pyscm/raw/master/examples/decision_boundary.png)
 

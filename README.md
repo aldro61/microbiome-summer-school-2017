@@ -22,3 +22,8 @@
 This tutorial was created for presentation at the 2017 Microbiome Summer School (Québec City, Canada).
 
 For any questions or comments, please contact [Alexandre Drouin](mailto:alexandre.drouin.8@ulaval.ca) or [François Laviolette](mailto:francois.laviolette@ift.ulaval.ca).
+
+
+### Availability
+
+This tutorial is available at the shortened URL: [http://git.io/mltutorial](http://git.io/mltutorial).

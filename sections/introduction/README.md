@@ -4,13 +4,15 @@
 
 ## Overview of our toolbox
 
-This tutorial is an introduction to machine learning in Python. We will rely heavily on the scikit-learn and numpy packages. Scikit-learn will be used for implementing machine learning protocols and learning algorithms, whereas numpy will be used to manipulate matrices of data.
+This tutorial is an introduction to machine learning in Python. We will rely heavily on the scikit-learn and numpy packages. Scikit-learn will be used for implementing machine learning protocols and learning algorithms, and numpy will be used to manipulate matrices of data.
 
-<img src="https://www.python.org/static/img/python-logo@2x.png" height="50" />
+<a href="https://www.python.org/"><img src="https://www.python.org/static/img/python-logo@2x.png" height="50" /></a>
 
-<img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" height="50" /> 
+<a href="http://scikit-learn.org/stable/"><img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" height="50" /></a>
 
-<img src="http://www.numpy.org/_static/numpy_logo.png" height="50" />
+<a href="http://www.numpy.org/"><img src="http://www.numpy.org/_static/numpy_logo.png" height="50" /></a>
+
+<a href="http://pandas.pydata.org/"><img src="http://pandas.pydata.org/_static/pandas_logo.png" height="50" /></a>
  
  
 ## Getting started
@@ -30,10 +32,7 @@ cd microbiome-ml-tutorial/exercises
 Install the dependencies for the tutorial by running the following command:
 
 ```bash
-sudo apt-get install virtualenv && \
-virtualenv env && \
-source ./env/bin/activate && \
-pip install numpy scipy matplotlib scikit-learn seaborn h5py --upgrade
+make install.dependencies
 ```
 
 Start the download of the supplementary data by running the following command:
