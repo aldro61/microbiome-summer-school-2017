@@ -35,12 +35,6 @@ Install the dependencies for the tutorial by running the following command:
 make install.dependencies
 ```
 
-Start the download of the supplementary data by running the following command:
-
-```bash
-make download.data
-```
-
 
 ## Objectives
 
