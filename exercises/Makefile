@@ -11,3 +11,5 @@ install.dependencies:
 	sudo pip install cython numpy scipy matplotlib scikit-learn seaborn h5py --upgrade && cd code/GSkernel_source && python build.py build_ext -b gs_kernel/ && cd .. && ln -s GSkernel_source/gs_kernel
 applications.antibiotics.data:
 	@wget -N http://graal.ift.ulaval.ca/adrouin/kover-example-data.zip -P ./data/antibiotics && unzip ./data/antibiotics/kover-example-data.zip
+applications.antibiotics.svm: code/applications.antibiotics.svm.py
+	@python $<

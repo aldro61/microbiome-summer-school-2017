@@ -194,7 +194,6 @@ for ds in os.listdir(data_path):
 
     # Figure 2: Comparison of the predictive performance of GS kernel variants
     plt.clf()
-    plt.clf()
     width = 0.5
     plt.bar([1], [best_result_aa_pos["estimator"].score(best_result_aa_pos["K"]["test"], y_test)], width, label="GS (Alignment + Physicochemical)")
     plt.bar([1 + width], [best_result_aa_only["estimator"].score(best_result_aa_only["K"]["test"], y_test)], width, label="GS (Physicochemical)")
@@ -202,7 +201,6 @@ for ds in os.listdir(data_path):
     plt.xlabel("Method")
     plt.ylabel("Coefficient of determination ($r^2$)")
     plt.gca().tick_params(labelbottom='off')
-    plt.legend()
     plt.legend()
     plt.savefig("gs_variants_low_res.png", dpi=100, bbox_inches="tight")
     plt.savefig("gs_variants_high_res.png", dpi=400, bbox_inches="tight")
