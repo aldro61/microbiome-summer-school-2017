@@ -185,3 +185,13 @@ make basics.model.selection
 4. Do some hyperparameter combinations lead to underfitting? Give an example.
 
 **Solution:** [click me](./solutions/model_selection/)
+
+<br />
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 3:** Copy the code from the "Basic Scikit-learn syntax" in a file called `my_experiment.py`. Run it with the following command:
+
+```python
+python my_experiment.py
+```
+
+Try modifying parts of the code and look at how it affects the output of the script.
