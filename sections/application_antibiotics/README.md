@@ -35,3 +35,8 @@ make applications.antibiotics.svm
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise:** Which of the models is the most accurate (SVM or Kover)? Can you guess why?
 
 **Solution:** [click me](./solutions/why_scm_better_svm/)
+
+
+## References
+
+Drouin, A., Giguère, S., Déraspe, M., Marchand, M., Tyers, M., Loo, V. G., ... & Corbeil, J. (2016). Predictive computational phenotyping and biomarker discovery using reference-free genome comparisons. BMC genomics, 17(1), 754. [[link]](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2889-6)
