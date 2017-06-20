@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 """
-
-TODO:
-    * Code cleanup
-    * Memoize kernel matrices to speed up CV (over C values)
+Trains Generic String and Spectrum kernel Support Vector Regressions for peptide protein binding affinity prediction
 
 """
 import h5py as h
@@ -158,11 +155,10 @@ def cross_validation_spectrum_kernel(seq, is_train, folds):
 
 
 for ds in os.listdir(data_path):
-    print ds
     if ".dat" not in ds:
         continue
 
-    if "DRB1_0701" not in ds:
+    if "DRB1_0701" not in ds:  # Limit to this allele for the tutorial
         continue
 
     random_state = np.random.RandomState(42)
@@ -199,7 +195,7 @@ for ds in os.listdir(data_path):
     plt.bar([1 + width], [best_result_aa_only["estimator"].score(best_result_aa_only["K"]["test"], y_test)], width, label="GS (Physicochemical)")
     plt.bar([1 + 2 * width], [best_result_pos_only["estimator"].score(best_result_pos_only["K"]["test"], y_test)], width, label="GS (Alignment)")
     plt.xlabel("Method")
-    plt.ylabel("Coefficient of determination ($r^2$)")
+    plt.ylabel("Coefficient of determination ($R^2$)")
     plt.gca().tick_params(labelbottom='off')
     plt.legend()
     plt.savefig("gs_variants_low_res.png", dpi=100, bbox_inches="tight")
@@ -209,10 +205,10 @@ for ds in os.listdir(data_path):
     # Figure 3: Comparison of the GS kernel and the Spectrum kernel
     plt.clf()
     plt.scatter(y_test, best_result_aa_pos["estimator"].predict(best_result_aa_pos["K"]["test"]),
-                label="GS (Alignment + Physicochemical) [{0:.3f}]".format(
+                label="GS (Alignment + Physicochemical) [$R^2=${0:.3f}]".format(
                     best_result_aa_pos["estimator"].score(best_result_aa_pos["K"]["test"], y_test)))
     plt.scatter(y_test, best_result_spectrum["estimator"].predict(best_result_spectrum["K"]["test"]),
-                label="Spectrum [{0:.3f}]".format(
+                label="Spectrum [$R^2=${0:.3f}]".format(
                     best_result_spectrum["estimator"].score(best_result_spectrum["K"]["test"], y_test)))
     plt.plot([0, y_test.max()], [0, y_test.max()], color="black")
     plt.xlabel("True binding affinity")
