@@ -33,3 +33,5 @@ make applications.antibiotics.svm
 ```
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise:** Which of the models is the most accurate (SVM or Kover)? Can you guess why?
+
+**Solution:** [click me](./solutions/why_scm_better_svm/)
