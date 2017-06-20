@@ -26,4 +26,10 @@ Once this is done, follow [the example](http://aldro61.github.io/kover/doc_examp
 
 ## Comparison to SVM
 
-Coming soon...
+Run the following command to train a Support Vector Machine on this dataset and compare it to Kover.
+
+```bash
+make applications.antibiotics.svm
+```
+
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise:** Which of the models is the most accurate (SVM or Kover)? Can you guess why?
