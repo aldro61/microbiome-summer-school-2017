@@ -146,7 +146,10 @@ print("The selected hyperparameter values are:", cv.best_params_)
 
 Scikit-learn's documentation offers many great examples and tutorials (see [here](http://scikit-learn.org/stable/auto_examples/index.html), [here](http://scikit-learn.org/stable/tutorial/index.html), and [here](http://scikit-learn.org/stable/user_guide.html)).
 
+
 ### Exercises
+
+*The code for all the exercises if in the `./code` directory. Take a look if you had time to finish all the exercises.*
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** In this exercise, we will see how the complexity of the learned model affects overfitting and underfitting. We use [linear regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) combined with [polynomial features](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) of various degrees. Polynomial features allow to model non-linear functions with linear models. For instance, supposing that all examples are represented by a single feature ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5Bx_1%5D) the corresponding polynomial features for a degree of 3 are ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5C%5B1%2C%20x_1%2C%20x_1%5E2%2C%20x_1%5E3%5C%5D).
 
@@ -194,4 +197,4 @@ make basics.model.selection
 python my_experiment.py
 ```
 
-Try modifying parts of the code and look at how it affects the output of the script.
+Try modifying parts of the code and look at how it affects the output of the script. For example, can you replace the [decision tree classifier](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) by a [support vector machine classifier](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)?
