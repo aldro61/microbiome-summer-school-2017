@@ -19,6 +19,7 @@ data_dir = "./data/antibiotics/"
 kover_example_path = "./kover-example/"
 random_state = np.random.RandomState(42)
 
+print "Loading the data..."
 # Load the kover dataset
 kover_dataset = KoverDataset(os.path.join(kover_example_path, "example.kover"))
 kover_genome_ids = kover_dataset.genome_identifiers[...]
@@ -33,6 +34,7 @@ K = similarity_data.values
 labels = kover_dataset.phenotype.metadata[...]
 
 # Training and testing set split
+print "Splitting the data into training and testing sets..."
 kover_train_example_idx = kover_dataset.get_split("example_split").train_genome_idx[...]
 kover_test_example_idx = kover_dataset.get_split("example_split").test_genome_idx[...]
 K_train = K[kover_train_example_idx][:, kover_train_example_idx]
@@ -41,6 +43,7 @@ y_train = labels[kover_train_example_idx]
 y_test = labels[kover_test_example_idx]
 
 # Assign each example to a cross-validation fold
+print "Assigning each example to a cross-validation fold..."
 n_folds = 5
 cv_folds = np.arange(K_train.shape[0]) % n_folds
 random_state.shuffle(cv_folds)
@@ -48,8 +51,8 @@ random_state.shuffle(cv_folds)
 c_values = np.logspace(-7, 7, 20)
 best_c = None
 best_c_score = -np.infty
+print "{0:d}-fold ross-validation for {1:d} C values...".format(n_folds, len(c_values))
 for c in c_values:
-
     fold_scores = []
     for fold in np.unique(cv_folds):
         fold_K_train = K_train[cv_folds != fold][:, cv_folds != fold]
@@ -65,18 +68,17 @@ for c in c_values:
     if cv_score > best_c_score:
         best_c = c
         best_c_score = cv_score
-
 print "The best C value is C = {0:.4f} with cv score = {1:.4f}".format(best_c, best_c_score)
 
+print "Re-training with best hyperparameter values..."
 estimator = SVC(C=best_c, kernel="precomputed").fit(K_train, y_train)
 svm_train_score = estimator.score(K_train, y_train)
 svm_test_score = estimator.score(K_test, y_test)
 
+print "Loading Kover results..."
 kover_results = json.load(open(os.path.join(kover_example_path, "results.json"), "r"))
 kover_train_score = 1.0 - kover_results["metrics"]["train"]["risk"][0]
 kover_test_score = 1.0 - kover_results["metrics"]["test"]["risk"][0]
-
-print kover_train_score
 
 width = 0.3
 plt.bar([0], [kover_train_score], width, color="red", label="Kover (SCM)")
@@ -87,5 +89,5 @@ plt.xticks([0.15, 1.18], ["Training set", "Testing set"])
 plt.xlabel("")
 plt.ylabel("Accuracy")
 plt.legend()
-plt.title("Accuracy for predicting Rifampicin resistance in M. tuberculosis")
+plt.title("Accuracy for predicting rifampicin resistance in M. tuberculosis")
 plt.show()
