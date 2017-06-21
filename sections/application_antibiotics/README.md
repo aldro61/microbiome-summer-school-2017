@@ -26,7 +26,7 @@ Once this is done, follow [the example](http://aldro61.github.io/kover/doc_examp
 
 ## Comparison to SVM
 
-Run the following command to train a Support Vector Machine on this dataset and compare it to Kover.
+Use the `cd ..` command to go back to the `exercise` directory. Then, run the following command to train a Support Vector Machine on this dataset and compare it to Kover.
 
 ```bash
 make applications.antibiotics.svm
