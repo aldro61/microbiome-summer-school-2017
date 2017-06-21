@@ -20,4 +20,4 @@ Many other hyperparameter values (in the bottom right corner) also lead to overf
 
 4. Do some hyperparameter combinations lead to underfitting? Give an example.
 
-Yes, *SVM C = 0* and *RBF kernel gamma = 0* lead to underfitting, since the training accuracy is 66%, but the testing accuracy is 51%. Many other hyperparameter values (in the bottom right corner) also lead to underfitting.
+Yes, *SVM C = 0* and *RBF kernel gamma = 0* lead to underfitting, since the training accuracy is 66%, but the testing accuracy is 51%. Many other hyperparameter values (in the bottom left corner) also lead to underfitting.
