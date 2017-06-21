@@ -8,13 +8,10 @@ import h5py as h
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-import pandas as pd
 import seaborn as sns; sns.set_palette("hls", 4)
-import warnings
 
 from gs_kernel.gs_kernel import gs_gram_matrix
 from itertools import product
-from sklearn.metrics import mean_squared_error
 from sklearn.svm import SVR as SupportVectorRegression
 
 data_path = "./data/peptide/"
