@@ -67,7 +67,7 @@ kernel and the learning algorithm
 
 <img src="figures/gs_vs_spectrum_high_res.png" width="80%" />
 
-The generic string kernel yields more accurate results. However, there is still room for improvement, as the maximum Coefficient of determination is 1. For more information about how these results can be improved, refer to Giguère et al., (2013).
+The generic string kernel yields more accurate results. However, there is still room for improvement, since the maximum Coefficient of determination is 1. For more information about how these results can be improved, see Giguère et al., (2013).
 
 ## References
 Giguère, S., Marchand, M., Laviolette, F., Drouin, A., & Corbeil, J. (2013). Learning a peptide-protein binding affinity predictor with kernel ridge regression. BMC bioinformatics, 14(1), 82. [[link]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-82)
