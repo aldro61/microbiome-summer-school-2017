@@ -50,7 +50,7 @@ Instead, we use a method called **k-fold cross-validation**. That is, we partiti
 Then, we iteratively leave one fold out for testing and train on the *k-1* remaining folds. Each time, we estimate the accuracy of the obtained model on the left out fold. Finally, we select the hyperparameter values that lead to the greatest accuracy, averaged over the *k* folds. 
 
 <img src="figures/cross_validation.png" height="350" />
-<span>Credits: <a href="https://twitter.com/MLpager">Pascal Germain @mlpager</a></span>
+<span>Figure credits: <a href="https://twitter.com/MLpager">Pascal Germain @mlpager</a></span>
 
 This is done for every combination of hyperparameter values and the one that leads to the greatest "CV score" is selected. It is then used to retrain the algorithm on the entire training set. This yields a model, which we can now evaluate on the testing set.
 
