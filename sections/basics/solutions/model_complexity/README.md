@@ -1,4 +1,4 @@
-<a href="../../#table-of-contents"><-- Back to table of contents</a>
+<a href="../../#exercises"><-- Back to exercise</a>
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise 1:** In this exercise, we will see how the complexity of the learned model affects overfitting and underfitting. We use [linear regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) combined with [polynomial features](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) of various degrees. Polynomial features allow to model non-linear functions with linear models. For instance, supposing that all examples are represented by a single feature ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5Bx_1%5D) the corresponding polynomial features for a degree of 3 are ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bx%7D%20%3D%20%5C%5B1%2C%20x_1%2C%20x_1%5E2%2C%20x_1%5E3%5C%5D).
 
