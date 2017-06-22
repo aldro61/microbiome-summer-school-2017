@@ -51,9 +51,6 @@ Then, we iteratively leave one fold out for testing and train on the *k-1* remai
 
 <img src="figures/cross_validation.png" height="350" />
 
-<span>Figure credits: <a href="https://twitter.com/MLpager">Pascal Germain @mlpager</a></span>
-<br />
-
 This is done for every combination of hyperparameter values and the one that leads to the greatest "CV score" is selected. It is then used to retrain the algorithm on the entire training set. This yields a model, which we can now evaluate on the testing set.
 
 ```python
