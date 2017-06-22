@@ -1,4 +1,4 @@
-<a href="../../#exercises"><-- Back to exercises</a>
+<a href="../../#exercises">&larr; Back to exercises</a>
 
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Exercise:** Train a [RBF kernel Support Vector Machine](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) classifier on the [breast cancer](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) data set from the UCI repository. To do so, run the following command.
 
@@ -26,4 +26,4 @@ Yes, *SVM C = 0* and *RBF kernel gamma = 0* lead to underfitting, since the trai
 
 <br />
 
-<a href="../../#exercises"><-- Back to exercises</a>
+<a href="../../#exercises">&larr; Back to exercises</a>
