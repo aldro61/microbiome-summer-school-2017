@@ -1,4 +1,4 @@
-<a href="../../#table-of-contents"><-- Back to table of contents</a>
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
 
 # Introduction
 
@@ -44,3 +44,8 @@ After completing this tutorial, you should have acquired the following skills:
 * Performing machine learning experiments using correct protocols
 * Interpreting the results of machine learning experiments
 * Using Python to apply machine learning algorithms to biological datasets
+
+
+<br />
+
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>

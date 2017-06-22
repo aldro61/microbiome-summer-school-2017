@@ -1,4 +1,4 @@
-<a href="../../#table-of-contents"><-- Back to table of contents</a>
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
 
 # Application: peptide protein binding affinity prediction
 
@@ -73,3 +73,8 @@ The generic string kernel yields more accurate results. However, there is still 
 Giguère, S., Marchand, M., Laviolette, F., Drouin, A., & Corbeil, J. (2013). Learning a peptide-protein binding affinity predictor with kernel ridge regression. BMC bioinformatics, 14(1), 82. [[link]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-82)
 
 Leslie, C. S., Eskin, E., & Noble, W. S. (2002, January). The spectrum kernel: A string kernel for SVM protein classification. In Pacific symposium on biocomputing (Vol. 7, No. 7, pp. 566-575). [[link]](http://psb.stanford.edu/psb-online/proceedings/psb02/leslie.pdf)
+
+
+<br />
+
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>

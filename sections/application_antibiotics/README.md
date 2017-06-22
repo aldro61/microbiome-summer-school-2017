@@ -1,4 +1,4 @@
-<a href="../../#table-of-contents"><-- Back to table of contents</a>
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
 
 # Application: predicting antibiotic resistance
 
@@ -40,3 +40,8 @@ make applications.antibiotics.svm
 ## References
 
 Drouin, A., Giguère, S., Déraspe, M., Marchand, M., Tyers, M., Loo, V. G., ... & Corbeil, J. (2016). Predictive computational phenotyping and biomarker discovery using reference-free genome comparisons. BMC genomics, 17(1), 754. [[link]](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2889-6)
+
+
+<br />
+
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>

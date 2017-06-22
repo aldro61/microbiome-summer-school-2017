@@ -1,4 +1,4 @@
-<a href="../../#table-of-contents"><-- Back to table of contents</a>
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
 
 # The basics
 
@@ -198,3 +198,8 @@ python my_experiment.py
 ```
 
 Try modifying parts of the code and look at how it affects the output of the script. For example, can you replace the [decision tree classifier](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) by a [support vector machine classifier](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)?
+
+
+<br />
+
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
