@@ -1,3 +1,5 @@
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
+
 # Conclusion
 
 ## What if I don't use Python?
@@ -24,3 +26,7 @@ Here are some great **-> FREE <-** machine learning books:
 * [Hugo Larochelle's deep learning course](https://www.youtube.com/watch?v=SGZ6BttHMPw&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH)
 * [Scikit-Learn tutorials](http://scikit-learn.org/stable/tutorial/index.html)
 * [Python course (free)](https://www.codeschool.com/courses/try-python)
+
+<br />
+
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
