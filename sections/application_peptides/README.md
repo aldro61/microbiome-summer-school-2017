@@ -1,4 +1,4 @@
-<a href="../../#table-of-contents"><-- Back to table of contents</a>
+<a href="../../#table-of-contents">&larr; Back to table of contents</a>
 
 # Application: peptide protein binding affinity prediction
 
