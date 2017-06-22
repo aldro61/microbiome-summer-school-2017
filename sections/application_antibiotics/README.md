@@ -37,6 +37,11 @@ make applications.antibiotics.svm
 **Solution:** [click me](./solutions/why_scm_better_svm/)
 
 
+## More antibiotic resistance models
+
+If you are interested in interpretable models of antibiotic resistance, take a look at the [Kover Antimicrobial Resistance Platform](https://aldro61.github.io/kover-amr-platform/), which catalogs the models obtained by applying Kover to a large number of datasets.
+
+
 ## References
 
 Drouin, A., Giguère, S., Déraspe, M., Marchand, M., Tyers, M., Loo, V. G., ... & Corbeil, J. (2016). Predictive computational phenotyping and biomarker discovery using reference-free genome comparisons. BMC genomics, 17(1), 754. [[link]](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2889-6)
