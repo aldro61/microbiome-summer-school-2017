@@ -7,7 +7,7 @@ One of the objectives of this tutorial is that you learn how to apply machine le
 * R: [see here](https://www.r-bloggers.com/what-are-the-best-machine-learning-packages-in-r/)
 * Java: [see here](http://machinelearningmastery.com/java-machine-learning/)
 * Graphical User Interface: 
-  * [Microsoft Azure](https://azure.microsoft.com/fr-ca/services/machine-learning/)
+  * [Microsoft Azure](https://azure.microsoft.com/en-ca/services/machine-learning/)
   * [Orange](https://orange.biolab.si/)
   * [Weka](http://www.cs.waikato.ac.nz/ml/weka/)
 
