@@ -30,3 +30,7 @@ We can also observe that the algorithm fits the training data so well that the m
 **3. If you were writing a paper about this model, which degree value would you use and which coefficient of determination would you report?**
 
 This is a trick question. In this example, we did not use cross-validation, so we cannot select a proper value for the degree hyperparameter. Selecting a value based on the testing set would lead to a biased estimation of the model's accuracy, since the parameter would be selected to work well on the data used for the evaluation.
+
+<br />
+
+<a href="../../#exercises"><-- Back to exercises</a>
