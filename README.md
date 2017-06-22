@@ -27,4 +27,4 @@ For any questions or comments, please contact [Alexandre Drouin](mailto:alexandr
 
 This tutorial was created for presentation at the 2017 Microbiome Summer School (Québec City, Canada).
 
-Shortened URL: [http://git.io/mltutorial](http://git.io/mltutorial).
+Shortened URL: [http://git.io/mltutorial](http://git.io/mltutorial)
